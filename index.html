@@ -14,16 +14,22 @@
                 <a href="#"><h1>Housingmatch.com1</h1></a>
                 <div id="checkbox">
                 <span>Bachelor</span>
-                <input class="checkbox" type="checkbox" name="Bachelor" value="BA">
+                <input class="checkbox" type="checkbox" name="Bachelor" value="BA"   >
                 <br />
                 <span>Master</span>
 
                 <input class="checkbox" type="checkbox" name="Master" value="MA">
                     <br />
-                <button id="submit">Go!</button>
+                    <script type= "text/javascript">
+                    onlyOneCheckBox()
+                    </script>
+                <button id="submit" onclick = onlyOneCheckBox() >Go!</button> 
             </div>
             </div>
         </div>
     </div>
+
+    <script src = "checkbox.js"> </script>
+    
 </body>
 </html>
