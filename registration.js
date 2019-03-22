@@ -36,3 +36,4 @@ const eMailUI = document.getElementById('email')
 const usernameUI = document.getElementById('username') 
 const passwordUI = document.getElementById('password')
 const submitBtnUI = document.getElementById('submit')
+
