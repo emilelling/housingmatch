@@ -9,7 +9,7 @@ function checkBox () {
     
        else if (bachelor == true && master == true)
         {
-            alert("Please just check one box");
+            alert("Please check just one box");
             return false; 
         }
     
