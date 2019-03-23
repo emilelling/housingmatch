@@ -101,11 +101,5 @@ submitUI.onclick = function () {
       return false
     }
   
-  
-  for (let i = 0; i < users.length; i++) {
-    if (usernameUI.value === users[i].username)
-    alert ("Username is already in use")
-    return false
-  }
   users.push({firstName: firstname, lastName: lastname, username: username, password: password})
 }
