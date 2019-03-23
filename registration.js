@@ -1,9 +1,5 @@
-/*This is the main function file for our registration page.
-User (seeker) gets to this page when there is a match with a host
-*/
 
 // hard coded users
-
 var users=[
  {
     firstName:"Amelie",
@@ -29,43 +25,87 @@ var users=[
 }
 ]
 
+// // Function for adding users const defines a constant reference to a value
+// // we cannot change constant primitive values, but we can change the properties of constant objects
+// const firstNameUI = document.getElementById('first-name')
+// const lastNameUI = document.getElementById('last-name')
+// const eMailUI = document.getElementById('e-mail')
+// const usernameUI = document.getElementById('username') 
+// const passwordUI = document.getElementById('password')
+// const submitBtnUI = document.getElementById('submit')
+
+// submitBtnUI.onclick = function () {
+
+//       if(firstNameUI.value.length > 0 && lastNameUI.value.length > 0 && eMaail.value.length > 0 && usernameUI.value.length > 0 && passwordUI.value.length > 0){
+//         if (passwordUI.value.length > 7) {
+//           if (eMailUI.contains("@") || eMailUI.contains(".")) {
+//         var firstName = firstNameUI.value
+//         var lastName = lastNameUI.value
+//         var username = usernameUI.value
+//         var password = passwordUI.value
+//         users.push({firstName: firstName, lastName: lastName, username: username, password: password})    
+//         console.log(users);
+//         firstNameUI.value ="";
+//         lastNameUI.value = "";
+//         usernameUI.value = "";
+//         passwordUI.value = "";
+//         window.location='file:///Users/oliverschwall/Documents/housingmatch/match.html'
+//       }
+// else { alert ("Please enter valid E-Mail") }
+
+// else { alert ("Password is too short")}
+//   }
+//         }
+//   else {
+//         alert("Please fill out the form")
+//       }
+    
+//       for (let i = 0; i < users.length; i++) {
+//         if (usernameUI.value === users[i].username)
+//       alert ("Username is already in use")
+//         return false
+//       }
+    
+//     users.push({firstName: firstname, lastName: lastname, username: username, password: password})
+//   }
+
 // Function for adding users 
 const firstNameUI = document.getElementById('first-name')
 const lastNameUI = document.getElementById('last-name')
-const eMailUI = document.getElementById('email')
 const usernameUI = document.getElementById('username') 
 const passwordUI = document.getElementById('password')
-const submitBtnUI = document.getElementById('submit')
+const eMailUI = document.getElementById('e-mail')
+const submitUI = document.getElementById('submit')
 
-submitBtnUI.onclick = function () {
-   
-      if(firstNameUI.value.length > 0 && lastNameUI.value.length > 0 && usernameUI.value.length > 0 && passwordUI.value.length > 0) {
-        if(passwordUI.value.length > 7) { 
-        var firstName = firstNameUI.value
-        var lastName = lastNameUI.value
-        var username = usernameUI.value
-        var password = passwordUI.value
-        users.push({firstName: firstName, lastName: lastName, username: username, password: password})
-        document.getElementById('resultSpan').innerText = "The user has been created"
-        console.log(users);
-        firstNameUI.value ="";
-        lastNameUI.value = "";
-        usernameUI.value = "";
-        passwordUI.value = "";
-        }
-        else {
-          document.getElementById('resultSpan').innerText="Your password is too short"
-        }
+submitUI.onclick = function () {
+    if(firstNameUI.value.length > 0 && lastNameUI.value.length > 0 && usernameUI.value.length > 0 && passwordUI.value.length > 0) {
+      if(passwordUI.value.length > 5) { 
+      var firstName = firstNameUI.value
+      var lastName = lastNameUI.value
+      var username = usernameUI.value
+      var password = passwordUI.value
+      users.push({firstName: firstName, lastName: lastName, username: username, password: password})
+      console.log(users);
+      firstNameUI.value ="";
+      lastNameUI.value = "";
+      usernameUI.value = "";
+      passwordUI.value = "";
+      window.location='file:///Users/oliverschwall/Documents/housingmatch/match.html';
       }
       else {
-        document.getElementById('resultSpan').innerText="You need to fill out the form"
-        return false
+       alert ("Your password is too short")
       }
-      for (let i = 0; i < users.length; i++) {
-        if (usernameUI.value === users[i].username)
-        document.getElementById('resultSpan').innerText="Username is already in use"
-        return false
-      }
-    
-    users.push({firstName: firstname, lastName: lastname, username: username, password: password})
+    }
+    else {
+      alert ("You need to fill out the form")
+      return false
+    }
+  
+  
+  for (let i = 0; i < users.length; i++) {
+    if (usernameUI.value === users[i].username)
+    alert ("Username is already in use")
+    return false
   }
+  users.push({firstName: firstname, lastName: lastname, username: username, password: password})
+}
