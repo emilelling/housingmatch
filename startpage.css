@@ -5,7 +5,7 @@ html, body {
     height: 100%; 
     width: 100%;
     color: #000;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family:'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
 }
 
 #dancebody {
@@ -59,23 +59,15 @@ a {
 
 }
 
-#pricingrange {
-    height: 50px;
-    width: 500px;
-    background-color: rgb(150, 176, 190);
-    padding: 20px;
-    border: 2px solid rgb(15, 84, 121);
-    font-size: 30px;
-    text-align: left;
-}
-
 #submit {
-    height: 50px;
-    width: 100px;
-    border: 1px solid rgb(15, 84, 121);
-    font-size: 30px;
-    background-color: azure;
-    padding: 1px 10px;
+font-family:'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
+width: 15%;
+padding: 15px;
+border: 1px solid rgb(15, 84, 121);
+background-color: #308ae4;
+cursor: pointer; /*the finger that appears when clicking on go*/
+font-weight: bold;
+color: #ffffff;
 }
 
 
