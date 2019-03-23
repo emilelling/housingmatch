@@ -1,0 +1,83 @@
+
+
+
+html, body {    
+    height: 100%; 
+    width: 100%;
+    color: #000;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#dancebody {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-image:url("https://cityscapeillustrator.com/wp-content/uploads/2018/05/copenhagen-pano-3b-uai-2880x649.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat;/* Do not repeat the image */
+    background-attachment: fixed;
+    background-size: auto; /* Resize the background image to cover the entire container */
+    background-position-y: 250px;
+
+}
+
+
+.content {
+    height: 300px;
+    width: 600px;
+    margin: 0px auto;
+}
+
+#center {
+    width: 400px;
+    margin-left: 100px;
+    position: absolute;
+    top: 30%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#checkbox{
+    text-align: center;
+}
+
+
+h1{
+    text-align: center;
+    color: #000;
+    font-size: 50px;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+* {
+    box-sizing: border-box;
+
+}
+
+#pricingrange {
+    height: 50px;
+    width: 500px;
+    background-color: rgb(150, 176, 190);
+    padding: 20px;
+    border: 2px solid rgb(15, 84, 121);
+    font-size: 30px;
+    text-align: left;
+}
+
+#submit {
+    height: 50px;
+    width: 100px;
+    border: 1px solid rgb(15, 84, 121);
+    font-size: 30px;
+    background-color: azure;
+    padding: 1px 10px;
+}
+
+
+
+
