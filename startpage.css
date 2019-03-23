@@ -59,6 +59,12 @@ a {
 
 }
 
+p {
+    text-align: center;
+    color: #000;
+    font-size: 15px;
+}
+
 #submit {
 font-family:'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
 width: 15%;
