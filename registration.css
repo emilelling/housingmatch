@@ -1,3 +1,47 @@
 html, body {
     text-align: center;
+    background-image:url("https://cityscapeillustrator.com/wp-content/uploads/2018/05/copenhagen-pano-3b-uai-2880x649.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat;/* Do not repeat the image */
+    background-attachment: fixed;
+    background-size: auto; /* Resize the background image to cover the entire container */
+    background-position-y: 250px;
+
+}
+
+.createUser {/* the entire class = createUser is set in a "box"*/
+    width: 300px; /* sets the size of the box */
+    margin: auto; /* centers it to the screen */
+    font-family:'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
+	}
+
+h1 {
+    height: 100%; 
+    width: 100%;
+    color: #000;
+    font-family:'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
+}
+
+input[type="text"] {
+    font-family:'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
+	width: 100%;
+	padding: 15px;
+	border: 1px solid rgb(15, 84, 121);
+	margin-bottom: 15px;
+	box-sizing:border-box;
+    }
+
+input[type="button"] {
+    font-family:'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid rgb(15, 84, 121);
+	background-color: #308ae4;
+	cursor: pointer; /*the finger that appears when clicking on go*/
+	font-weight: bold;
+	color: #ffffff;
+    }
+
+.actionSpan {
+    font-family:'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
 }
