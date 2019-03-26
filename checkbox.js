@@ -15,17 +15,23 @@ function checkBox () {
     
 
         if ((document.getElementById("BA").checked == true) && (document.getElementById("MA").checked == false)) {
-            window.location='#';
+            document.getElementById('registration') .style.display ='none';
+            document.getElementById('checkbox') .style.display = 'none';
+            document.getElementById('moodpictures') .style.display = 'block';
             return false;
         }
     
 
         else if ((document.getElementById("BA").checked == false) && (document.getElementById("MA").checked == true)) {
-            window.location='#';
+            document.getElementById('registration') .style.display ='none';
+            document.getElementById('checkbox') .style.display = 'none';
+            document.getElementById('moodpictures') .style.display = 'block';
             return false;
         }
+
+
     }
-       
+
     
 
 
