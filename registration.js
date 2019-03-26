@@ -117,9 +117,4 @@ submitUI.onclick = function () {
 
 
 
-const images = document.getElementsByClassName('image')
-for (image of images) {
-  image.onclick = function() {
-    console.log(this.dataset.itemid);
-  }
-}
+
