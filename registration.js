@@ -90,7 +90,7 @@ submitUI.onclick = function () {
       lastNameUI.value = "";
       usernameUI.value = "";
       passwordUI.value = "";
-      window.location='./match.html';
+
       }
       else {
        alert ("Your password is too short")
