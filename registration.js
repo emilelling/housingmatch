@@ -70,30 +70,26 @@ var users=[
 //   }
 
 // Function for adding users 
-const firstNameUI = document.getElementById('first-name')
-const lastNameUI = document.getElementById('last-name')
-const usernameUI = document.getElementById('username') 
-const passwordUI = document.getElementById('password')
+const firstNameUI = document.getElementById ('first-name')
+const lastNameUI = document.getElementById ('last-name')
+const usernameUI = document.getElementById ('username')
+const passwordUI = document.getElementById ('password')
 const eMailUI = document.getElementById('e-mail')
 const submitUI = document.getElementById('submit')
 
+var firstName = firstNameUI.value
+var lastName = lastNameUI.value
+var username = usernameUI.value
+var password = passwordUI.value
+
 submitUI.onclick = function () {
-    if(firstNameUI.value.length > 0 && lastNameUI.value.length > 0 && usernameUI.value.length > 0 && passwordUI.value.length > 0) {
-      if(passwordUI.value.length > 5) { 
-      var firstName = firstNameUI.value
-      var lastName = lastNameUI.value
-      var username = usernameUI.value
-      var password = passwordUI.value
-      users.push({firstName: firstName, lastName: lastName, username: username, password: password})
-      console.log(users);
-      firstNameUI.value ="";
-      lastNameUI.value = "";
-      usernameUI.value = "";
-      passwordUI.value = "";
-      }
-      else {
-       alert ("Your password is too short")
-      }
+  if(firstNameUI.value.length === 0 || lastNameUI.value.length === 0 || usernameUI.value.length === 0 || passwordUI.value.length === 0) {
+  alert ("You need to fill out the form");
+  return false;
+  }
+  if(passwordUI.value.length < 5) {
+     alert ("Your password is too short");
+     return false;
     }
     else {
       alert ("You need to fill out the form")
@@ -105,12 +101,23 @@ submitUI.onclick = function () {
   document.getElementById('moodpictures').style = '';
 }
 
+  if (eMailUI.value.endsWith("@student.cbs.dk")){
 
-window.localStorage.setItem("users", JSON.stringify(users));
-JSON.parse(window.localStorage.getItem("users"));
+      users.push({firstName: firstName, lastName: lastName, username: username, password: password})
+    //users.push(new User(firstName, lastName, username, password))
+    // class with  different propoerties assigned
+    // class firstName: lastName:  username:  password: 
+      console.log(users);
 
-
-var mood  = [13, 14, 23, 24];
+      window.location='./match.html';
+    } 
+  else {
+    // firstNameUI.value ="";
+    // lastNameUI.value = "";
+    usernameUI.value = "";
+    passwordUI.value = "";
+    alert ("Please enter a valid CBS email");
+    }
 
 const images = document.getElementsByClassName('image')
 for (image of images) {
