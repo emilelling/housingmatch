@@ -15,7 +15,7 @@ function checkBox () {
     
 
         if ((document.getElementById("BA").checked == true) && (document.getElementById("MA").checked == false)) {
-            window.location='file:///Users/oliverschwall/Documents/housingmatch/BA.html';
+            window.location='./BA.html';
             return false;
         }
     
