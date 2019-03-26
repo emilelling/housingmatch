@@ -104,15 +104,3 @@ submitUI.onclick = function () {
   users.push({firstName: firstname, lastName: lastname, username: username, password: password})
 
 }
-
-var debug = 1; 
-var users;
-if (localStorage.getItem("users")=== null){
-  users =[]; 
-   } else {
-     users=JSON.parse(localStorage.getItem("users"));
-     for (let i = 0; i < users.length; i++) {
-       users[i] = new (users[i].firstName,user[i].lastName, user[i].username, user[i].password, user[i].lastAccess);
-      
-     }
-}
