@@ -21,7 +21,7 @@ function checkBox () {
     
 
         else if ((document.getElementById("BA").checked == false) && (document.getElementById("MA").checked == true)) {
-            window.location='file:///Users/oliverschwall/Documents/housingmatch/MA.html';
+            window.location='./MA.html';
             return false;
         }
     }
