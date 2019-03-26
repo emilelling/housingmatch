@@ -90,7 +90,7 @@ submitUI.onclick = function () {
       lastNameUI.value = "";
       usernameUI.value = "";
       passwordUI.value = "";
-      window.location='file:///Users/oliverschwall/Documents/housingmatch/match.html';
+      window.location='./match.html';
       }
       else {
        alert ("Your password is too short")
@@ -102,4 +102,14 @@ submitUI.onclick = function () {
     }
   
   users.push({firstName: firstname, lastName: lastname, username: username, password: password})
+}
+
+
+if (localStorage.getItem('users') === null) {
+  users = [];
+} else {
+  users = JSON.parse(localStorage.getItem('users'));
+  for (let i = 0; i < users.length; i++) {
+    users[i] = new User(users[i].firstname, users[i].lastname, users[i].username, users[i].password);
+  }
 }
