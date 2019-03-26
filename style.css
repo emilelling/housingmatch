@@ -1,12 +1,12 @@
 html, body {     
     color: #000;
     font-family:'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
-    /* background-image:url("https://cityscapeillustrator.com/wp-content/uploads/2018/05/copenhagen-pano-3b-uai-2880x649.jpg"); */
-    /* background-position: center; /* Center the image */
-    /* background-repeat: no-repeat;/* Do not repeat the image */
-    /* background-attachment: fixed;
-    /* background-size: auto; /* Resize the background image to cover the entire container */
-    /* background-position-y: 250px; */
+    background-image:url("https://cityscapeillustrator.com/wp-content/uploads/2018/05/copenhagen-pano-3b-uai-2880x649.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat;/* Do not repeat the image */
+    background-attachment: fixed;
+    background-size: auto; /* Resize the background image to cover the entire container */
+    background-position-y: 250px;
 
 
 }
@@ -41,6 +41,9 @@ html, body {
     display: none;
 }
 
+#registration {
+    display: block;
+}
 
 h1{
     text-align: center;
