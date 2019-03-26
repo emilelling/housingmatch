@@ -101,6 +101,8 @@ submitUI.onclick = function () {
     }
   
   users.push({firstName: firstname, lastName: lastname, username: username, password: password})
+  document.getElementById('checkbox').style = 'display: none;';
+  document.getElementById('moodpictures').style = '';
 }
 
 
@@ -110,4 +112,9 @@ JSON.parse(window.localStorage.getItem("users"));
 
 var mood  = [13, 14, 23, 24];
 
-var document.getElementById
+const images = document.getElementsByClassName('image')
+for (image of images) {
+  image.onclick = function() {
+    console.log(this.dataset.itemid);
+  }
+}
