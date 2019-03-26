@@ -100,6 +100,8 @@ submitUI.onclick = function () {
    // class firstName: lastName:  username:  password:
      console.log(users);
     
+     document.getElementById('checkbox') .style.display =;
+     document.getElementById('moodpictures') .style.display = none;
    }
  else {
    // firstNameUI.value ="";
