@@ -33,6 +33,9 @@ const usernameUI = document.getElementById ('username')
 const passwordUI = document.getElementById ('password')
 const eMailUI = document.getElementById('e-mail')
 const submitUI = document.getElementById('submit')
+const bachelorUI = document.getElementById('BA')
+const masterUI = document.getElementById('MA')
+const checkBoxUI = document.getElementById ('checkbox')
 
 
 var activeUser
@@ -92,6 +95,7 @@ submitUI.onclick = function () {
      }
  
 
+
      if ((document.getElementById("BA").checked == true) && (document.getElementById("MA").checked == false)) {
          document.getElementById('registration') .style.display ='none';
          document.getElementById('checkbox') .style.display = 'none';
@@ -108,6 +112,17 @@ submitUI.onclick = function () {
      
          return false;
      }
+
+     
+     // we need to notice the click on checkbox
+     // then we need to store the choice (value) and assign it to the activeUser
+     // Then we have to do the "same" for moodpictures
+     // assign each picture to a value, register the choice(click)
+     // assign to activeuser
+
+     
+
+     
 
 // Image function
 const images = document.getElementsByClassName('image')
