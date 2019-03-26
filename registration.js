@@ -100,8 +100,6 @@ submitUI.onclick = function () {
    // class firstName: lastName:  username:  password:
      console.log(users);
     
-     document.getElementById('checkbox') .style.display =;
-     document.getElementById('moodpictures') .style.display = none;
    }
  else {
    // firstNameUI.value ="";
@@ -114,6 +112,9 @@ submitUI.onclick = function () {
    window.localStorage.setItem("users", JSON.stringify(users));
    JSON.parse(window.localStorage.getItem("users"));
 
+   document.getElementById('registration') .style.display ='none';
+   document.getElementById('checkbox') .style.display = 'block';
+   document.getElementById('moodpictures') .style.display = 'none';
  }
 
 
