@@ -119,4 +119,4 @@ submitUI.onclick = function () {
     alert ("Please enter a valid CBS email");
     }
 
-var document.getElementById 
+
