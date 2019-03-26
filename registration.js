@@ -51,8 +51,8 @@ submitUI.onclick = function () {
 
 //  if (eMailUI.value.endsWith("@student.cbs.dk")){
 
-//      users.push({firstName: firstName, lastName: lastName, username: username, password: password})
-//    //users.push(new User(firstName, lastName, username, password))
+//      users.push({firstName: firstName, lastName: lastName, eMail: eMail, username: username, password: password})
+//    //users.push(new User(firstName, lastName, eMail, username, password))
 //    // class with  different propoerties assigned
 //    // class firstName: lastName:  username:  password:
 //      console.log(users);
