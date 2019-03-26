@@ -33,9 +33,9 @@ const usernameUI = document.getElementById ('username')
 const passwordUI = document.getElementById ('password')
 const eMailUI = document.getElementById('e-mail')
 const submitUI = document.getElementById('submit')
-const bachelorUI = document.getElementById('BA')
-const masterUI = document.getElementById('MA')
-const checkBoxUI = document.getElementById ('checkbox')
+// const bachelorUI = document.getElementById('BA')
+// const masterUI = document.getElementById('MA')
+// const checkBoxUI = document.getElementById ('checkbox1')
 
 
 var activeUser
@@ -80,6 +80,9 @@ submitUI.onclick = function () {
  }
 // Checkbox function
  function checkBox () {
+
+  
+
  var bachelor = document.getElementById("BA").checked;
  var master = document.getElementById("MA").checked;
      if (bachelor == false && master == false)
@@ -100,7 +103,8 @@ submitUI.onclick = function () {
          document.getElementById('registration') .style.display ='none';
          document.getElementById('checkbox') .style.display = 'none';
          document.getElementById('moodpictures') .style.display = 'block';
-     
+
+         activeUser.levelofstudy = 'BA'
          return false;
      }
  
@@ -110,9 +114,16 @@ submitUI.onclick = function () {
          document.getElementById('checkbox') .style.display = 'none';
          document.getElementById('moodpictures') .style.display = 'block';
      
+         activeUser.levelofstudy = 'MA'
          return false;
      }
 
+    //  document.getElementById ('checkbox1')
+    //  addEventListener("click", checkBox);
+    //  function () {
+    //   window.localStorage.setItem("users", JSON.stringify(users));
+    //   JSON.parse(window.localStorage.getItem("users"));
+    }
      
      // we need to notice the click on checkbox
      // then we need to store the choice (value) and assign it to the activeUser
@@ -126,13 +137,16 @@ submitUI.onclick = function () {
 
 // Image function
 const images = document.getElementsByClassName('image')
+
 for (image of images) {
   image.onclick = function() {
     console.log(this.dataset.itemid);
-
+    activeUser.imagechoice = this.dataset.itemid
   }
+  
 }
-}
+
+
 // function checkBox () {
 //   var bachelor = document.getElementById("BA").checked;
 //   var master = document.getElementById("MA").checked;
