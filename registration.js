@@ -107,7 +107,7 @@ submitUI.onclick = function () {
     // lastNameUI.value = "";
     usernameUI.value = "";
     passwordUI.value = "";
-    alert ("wrong email");
+    alert ("Please enter a valid CBS email");
     }
 
   }
