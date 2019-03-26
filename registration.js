@@ -66,15 +66,8 @@ submitUI.onclick = function () {
 //    alert ("Please enter a valid CBS email");
 //    }
 
-if (localStorage.getItem('users') === null) {
-  users = [];
-} else {
-  users = JSON.parse(localStorage.getItem('users'));
-  for (let i = 0; i < users.length; i++) {
-    users[i] = new User(users[i].first-name, users[i].last-name, user[i].e-eMail, users[i].username, users[i].password, users[i].lastAccess);
-  }
-}
-
+   window.localStorage.setItem("users", JSON.stringify(users));
+   JSON.parse(window.localStorage.getItem("users"));
 
    document.getElementById('registration') .style.display ='none';
    document.getElementById('checkbox') .style.display = 'block';
