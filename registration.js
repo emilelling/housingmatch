@@ -105,11 +105,10 @@ submitUI.onclick = function () {
 }
 
 
-if (localStorage.getItem('users') === null) {
-  users = [];
-} else {
-  users = JSON.parse(localStorage.getItem('users'));
-  for (let i = 0; i < users.length; i++) {
-    users[i] = new User(users[i].firstname, users[i].lastname, users[i].username, users[i].password);
-  }
-}
+window.localStorage.setItem("users", JSON.stringify(users));
+JSON.parse(window.localStorage.getItem("users"));
+
+
+var mood  = [13, 14, 23, 24];
+
+var document.getElementById
