@@ -70,36 +70,44 @@ var users=[
 //   }
 
 // Function for adding users 
-const firstNameUI = document.getElementById('first-name')
-const lastNameUI = document.getElementById('last-name')
-const usernameUI = document.getElementById('username') 
-const passwordUI = document.getElementById('password')
+const firstNameUI = document.getElementById ('first-name')
+const lastNameUI = document.getElementById ('last-name')
+const usernameUI = document.getElementById ('username')
+const passwordUI = document.getElementById ('password')
 const eMailUI = document.getElementById('e-mail')
 const submitUI = document.getElementById('submit')
 
+var firstName = firstNameUI.value
+var lastName = lastNameUI.value
+var username = usernameUI.value
+var password = passwordUI.value
+
 submitUI.onclick = function () {
-    if(firstNameUI.value.length > 0 && lastNameUI.value.length > 0 && usernameUI.value.length > 0 && passwordUI.value.length > 0) {
-      if(passwordUI.value.length > 5) { 
-      var firstName = firstNameUI.value
-      var lastName = lastNameUI.value
-      var username = usernameUI.value
-      var password = passwordUI.value
+  if(firstNameUI.value.length === 0 || lastNameUI.value.length === 0 || usernameUI.value.length === 0 || passwordUI.value.length === 0) {
+  alert ("You need to fill out the form");
+  return false;
+  }
+  if(passwordUI.value.length < 5) {
+     alert ("Your password is too short");
+     return false;
+    }
+
+  if (eMailUI.value.endsWith("@student.cbs.dk")){
+
       users.push({firstName: firstName, lastName: lastName, username: username, password: password})
+    //users.push(new User(firstName, lastName, username, password))
+    // class with  different propoerties assigned
+    // class firstName: lastName:  username:  password: 
       console.log(users);
-      firstNameUI.value ="";
-      lastNameUI.value = "";
-      usernameUI.value = "";
-      passwordUI.value = "";
-      window.location='file:///Users/oliverschwall/Documents/housingmatch/match.html';
-      }
-      else {
-       alert ("Your password is too short")
-      }
+
+      window.location='./match.html';
+    } 
+  else {
+    // firstNameUI.value ="";
+    // lastNameUI.value = "";
+    usernameUI.value = "";
+    passwordUI.value = "";
+    alert ("wrong email");
     }
-    else {
-      alert ("You need to fill out the form")
-      return false
-    }
-  
-  users.push({firstName: firstname, lastName: lastname, username: username, password: password})
-}
+
+  }
