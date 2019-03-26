@@ -91,6 +91,15 @@ submitUI.onclick = function () {
      alert ("Your password is too short");
      return false;
     }
+    else {
+      alert ("You need to fill out the form")
+      return false
+    }
+  
+  users.push({firstName: firstname, lastName: lastname, username: username, password: password})
+  document.getElementById('checkbox').style = 'display: none;';
+  document.getElementById('moodpictures').style = '';
+}
 
   if (eMailUI.value.endsWith("@student.cbs.dk")){
 

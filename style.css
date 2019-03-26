@@ -34,6 +34,11 @@ html, body {
 
 #checkbox{
     text-align: center;
+    display: none;
+}
+
+#moodpictures{
+    display: none;
 }
 
 
