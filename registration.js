@@ -92,22 +92,22 @@ submitUI.onclick = function () {
     return false;
    }
 
- if (eMailUI.value.endsWith("@student.cbs.dk")){
+//  if (eMailUI.value.endsWith("@student.cbs.dk")){
 
-     users.push({firstName: firstName, lastName: lastName, username: username, password: password})
-   //users.push(new User(firstName, lastName, username, password))
-   // class with  different propoerties assigned
-   // class firstName: lastName:  username:  password:
-     console.log(users);
+//      users.push({firstName: firstName, lastName: lastName, username: username, password: password})
+//    //users.push(new User(firstName, lastName, username, password))
+//    // class with  different propoerties assigned
+//    // class firstName: lastName:  username:  password:
+//      console.log(users);
     
-   }
- else {
-   // firstNameUI.value ="";
-   // lastNameUI.value = "";
-   usernameUI.value = "";
-   passwordUI.value = "";
-   alert ("Please enter a valid CBS email");
-   }
+//    }
+//  else {
+//    // firstNameUI.value ="";
+//    // lastNameUI.value = "";
+//    usernameUI.value = "";
+//    passwordUI.value = "";
+//    alert ("Please enter a valid CBS email");
+//    }
 
    window.localStorage.setItem("users", JSON.stringify(users));
    JSON.parse(window.localStorage.getItem("users"));
