@@ -36,25 +36,3 @@ function checkBox () {
     // window.localStorage.setItem("MA", JSON.stringify(users));
     // JSON.parse(window.localStorage.getItem("MA"));
  
-
-
-
-// // only if one box is checked it should redirect to two more index.html sides
-// // one for BA
-// // one for MA
-
-// function checkBA(){
-// if (document.getElementById("BA").checked) {
-//         window.location='file:///Users/oliverschwall/Documents/housingmatch/BA.html';
-//         return false;
-//     }
-//     return true;
-
-// }
-
-// function checkMA(){
-//     if (document.getElementById("MA").checked) {
-//             window.location='file:///Users/oliverschwall/Documents/housingmatch/MA.html';
-//             return false;
-//         }
-//         return true;
