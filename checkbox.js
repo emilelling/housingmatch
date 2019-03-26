@@ -18,6 +18,7 @@ function checkBox () {
             document.getElementById('registration') .style.display ='none';
             document.getElementById('checkbox') .style.display = 'none';
             document.getElementById('moodpictures') .style.display = 'block';
+        
             return false;
         }
     
@@ -26,14 +27,15 @@ function checkBox () {
             document.getElementById('registration') .style.display ='none';
             document.getElementById('checkbox') .style.display = 'none';
             document.getElementById('moodpictures') .style.display = 'block';
+        
             return false;
         }
-
-
     }
 
     
-
+    // window.localStorage.setItem("MA", JSON.stringify(users));
+    // JSON.parse(window.localStorage.getItem("MA"));
+ 
 
 
 
@@ -56,5 +58,3 @@ function checkBox () {
 //             return false;
 //         }
 //         return true;
-    
-//     }

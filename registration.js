@@ -34,12 +34,14 @@ const passwordUI = document.getElementById ('password')
 const eMailUI = document.getElementById('e-mail')
 const submitUI = document.getElementById('submit')
 
-var firstName = firstNameUI.value
-var lastName = lastNameUI.value
-var username = usernameUI.value
-var password = passwordUI.value
 
+var activeUser
 submitUI.onclick = function () {
+  console.log(activeUser)
+  var firstName = firstNameUI.value
+  var lastName = lastNameUI.value
+  var username = usernameUI.value
+  var password = passwordUI.value
  if(firstNameUI.value.length === 0 || lastNameUI.value.length === 0 || usernameUI.value.length === 0 || passwordUI.value.length === 0) {
  alert ("You need to fill out the form");
  return false;
@@ -49,22 +51,22 @@ submitUI.onclick = function () {
     return false;
    }
 
-//  if (eMailUI.value.endsWith("@student.cbs.dk")){
-
-//      users.push({firstName: firstName, lastName: lastName, eMail: eMail, username: username, password: password})
-//    //users.push(new User(firstName, lastName, eMail, username, password))
-//    // class with  different propoerties assigned
-//    // class firstName: lastName:  username:  password:
-//      console.log(users);
+ if (true ||eMailUI.value.endsWith("@student.cbs.dk")){
+    activeUser = {firstName: firstName, lastName: lastName, username: username, password: password}
+     users.push(activeUser);
+   //users.push(new User(firstName, lastName, username, password))
+   // class with  different propoerties assigned
+   // class firstName: lastName:  username:  password:
+     console.log(users);
     
-//    }
-//  else {
-//    // firstNameUI.value ="";
-//    // lastNameUI.value = "";
-//    usernameUI.value = "";
-//    passwordUI.value = "";
-//    alert ("Please enter a valid CBS email");
-//    }
+   }
+ else {
+   // firstNameUI.value ="";
+   // lastNameUI.value = "";
+   usernameUI.value = "";
+   passwordUI.value = "";
+   alert ("Please enter a valid CBS email");
+   }
 
    window.localStorage.setItem("users", JSON.stringify(users));
    JSON.parse(window.localStorage.getItem("users"));
