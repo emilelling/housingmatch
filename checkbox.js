@@ -15,13 +15,13 @@ function checkBox () {
     
 
         if ((document.getElementById("BA").checked == true) && (document.getElementById("MA").checked == false)) {
-            window.location='./BA.html';
+            window.location='#';
             return false;
         }
     
 
         else if ((document.getElementById("BA").checked == false) && (document.getElementById("MA").checked == true)) {
-            window.location='./MA.html';
+            window.location='#';
             return false;
         }
     }
