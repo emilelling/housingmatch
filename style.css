@@ -59,14 +59,14 @@ p {
 }
 
 #submit {
-font-family:'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
-width: 15%;
-padding: 15px;
-border: 1px solid rgb(15, 84, 121);
-background-color: #308ae4;
-cursor: pointer; /*the finger that appears when clicking on go*/
-font-weight: bold;
-color: #ffffff;
+    font-family:'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
+    width: 15%;
+    padding: 15px;
+    border: 1px solid rgb(15, 84, 121);
+    background-color: #308ae4;
+    cursor: pointer; /*the finger that appears when clicking on go*/
+    font-weight: bold;
+    color: #ffffff;
 }
 
 .createUser {/* the entire class = createUser is set in a "box"*/
