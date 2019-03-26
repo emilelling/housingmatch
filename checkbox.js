@@ -15,25 +15,26 @@ function checkBox () {
     
 
         if ((document.getElementById("BA").checked == true) && (document.getElementById("MA").checked == false)) {
-            document.getElementById('registration') .style.display ='none';
-            document.getElementById('checkbox') .style.display = 'none';
-            document.getElementById('moodpictures') .style.display = 'block';
+
             return false;
         }
     
 
         else if ((document.getElementById("BA").checked == false) && (document.getElementById("MA").checked == true)) {
-            document.getElementById('registration') .style.display ='none';
-            document.getElementById('checkbox') .style.display = 'none';
-            document.getElementById('moodpictures') .style.display = 'block';
+          
             return false;
         }
 
-
+activeUser.level = 
     }
 
     
-
+    window.localStorage.setItem("users", JSON.stringify(users));
+    JSON.parse(window.localStorage.getItem("users"));
+ 
+    document.getElementById('registration') .style.display ='none';
+    document.getElementById('checkbox') .style.display = 'block';
+    document.getElementById('moodpictures') .style.display = 'none';
 
 
 
