@@ -38,6 +38,7 @@ html, body {
 }
 
 #moodpictures{
+    text-align: center;
     display: none;
 }
 
