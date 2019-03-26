@@ -110,4 +110,4 @@ JSON.parse(window.localStorage.getItem("users"));
 
 var mood  = [13, 14, 23, 24];
 
-var document.getElementById
+var document.getElementById 
