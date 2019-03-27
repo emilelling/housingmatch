@@ -27,10 +27,10 @@ var users=[
 
 
 // Function for adding users 
-const firstNameUI = document.getElementById ('first-name')
-const lastNameUI = document.getElementById ('last-name')
-const usernameUI = document.getElementById ('username')
-const passwordUI = document.getElementById ('password')
+const firstNameUI = document.getElementById('first-name')
+const lastNameUI = document.getElementById('last-name')
+const usernameUI = document.getElementById('username')
+const passwordUI = document.getElementById('password')
 const eMailUI = document.getElementById('e-mail')
 const submitUI = document.getElementById('submit')
 // const bachelorUI = document.getElementById('BA')
@@ -76,13 +76,13 @@ submitUI.onclick = function () {
 
    document.getElementById('registration') .style.display ='none';
    document.getElementById('checkbox') .style.display = 'block';
-   document.getElementById('moodpictures') .style.display = 'none';
+   document.getElementById('moodpicturesFirst') .style.display = 'none';
+   document.getElementById('moodpicturesSecond') .style.display = 'none';
+
  }
 // Checkbox function
  function checkBox () {
-
-  
-
+ 
  var bachelor = document.getElementById("BA").checked;
  var master = document.getElementById("MA").checked;
      if (bachelor == false && master == false)
@@ -102,7 +102,9 @@ submitUI.onclick = function () {
      if ((document.getElementById("BA").checked == true) && (document.getElementById("MA").checked == false)) {
          document.getElementById('registration') .style.display ='none';
          document.getElementById('checkbox') .style.display = 'none';
-         document.getElementById('moodpictures') .style.display = 'block';
+         document.getElementById('moodpicturesFirst') .style.display = 'block';
+         document.getElementById('moodpicturesSecond') .style.display = 'none';
+      
 
          activeUser.levelofstudy = 'BA'
          return false;
@@ -112,7 +114,9 @@ submitUI.onclick = function () {
      else if ((document.getElementById("BA").checked == false) && (document.getElementById("MA").checked == true)) {
          document.getElementById('registration') .style.display ='none';
          document.getElementById('checkbox') .style.display = 'none';
-         document.getElementById('moodpictures') .style.display = 'block';
+         document.getElementById('moodpicturesFirst') .style.display = 'block';
+         document.getElementById('moodpicturesSecond') .style.display = 'none';
+  
      
          activeUser.levelofstudy = 'MA'
          return false;
@@ -125,26 +129,40 @@ submitUI.onclick = function () {
     //   JSON.parse(window.localStorage.getItem("users"));
     }
      
-     // we need to notice the click on checkbox
-     // then we need to store the choice (value) and assign it to the activeUser
-     // Then we have to do the "same" for moodpictures
-     // assign each picture to a value, register the choice(click)
-     // assign to activeuser
 
      
 
      
 
-// Image function
-const images = document.getElementsByClassName('image')
+// Image function 1
+const imagesFirst = document.getElementsByClassName('imageFirst')
 
-for (image of images) {
+for (image of imagesFirst) {
   image.onclick = function() {
     console.log(this.dataset.itemid);
-    activeUser.imagechoice = this.dataset.itemid
+    activeUser.imagechoiceFirst = this.dataset.itemid
+
+    document.getElementById('moodpicturesFirst') .style.display = 'none';
+    document.getElementById('moodpicturesSecond') .style.display = 'block';
   }
   
 }
+
+
+// Image function 2
+const imagesSecond = document.getElementsByClassName('imageSecond')
+
+for (image of imagesSecond) {
+  image.onclick = function() {
+    console.log(this.dataset.itemid);
+    activeUser.imagechoiceSecond = this.dataset.itemid
+
+  }
+  
+}
+
+
+
 
 
 // function checkBox () {
