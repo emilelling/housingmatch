@@ -118,6 +118,7 @@ for (image of images) {
   }
 }
 }
+
 // function checkBox () {
 //   var bachelor = document.getElementById("BA").checked;
 //   var master = document.getElementById("MA").checked;
