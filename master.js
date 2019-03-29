@@ -142,18 +142,20 @@ for (image of imagesFirst) {
     console.log(this.dataset.itemid);
     activeUser.imagechoiceFirst = this.dataset.itemid
 
-    document.getElementById(this.dataset.itemid).style.border = '3px solid blue'
+    // document.getElementById(this.dataset.itemid).style.border = '3px solid blue'
 
-    setTimeout(() => {
+    // setTimeout(() => {
 
-      //disable click for 
-      style='pointer-events:none';
+    //   // //disable click for 
+     
+
       document.getElementById('moodpicturesFirst') .style.display = 'none';
       document.getElementById('moodpicturesSecond') .style.display = 'block';
 
-    }, 1500)
+    // }, 1500)
     
-}}
+}
+}
 
 
 
