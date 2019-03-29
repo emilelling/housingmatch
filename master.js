@@ -5,22 +5,22 @@ var users=[]
 users.push(new Users("Amelie", "Schwall", "amelie@student.cbs.dk", "amelie", "12345678", "levelofstudy", null, null ))
  
 // do for all users as above
-{
-    firstName:"Tilla Marie",
-    lastName:"Lønnum",
-    eMail:"tilla@student.cbs.dk", 
-    username:"tilla", 
-    password:"cbsmatch"
-},
-{
-    firstName:"Emil Elling",
-    lastName:"Jørgensen",
-    eMail:"emil@student.cbs.dk", 
-    username:"tilla", 
-    password:"cbsmatch"
+// {
+//     firstName:"Tilla Marie",
+//     lastName:"Lønnum",
+//     eMail:"tilla@student.cbs.dk", 
+//     username:"tilla", 
+//     password:"cbsmatch"
+// },
+// {
+//     firstName:"Emil Elling",
+//     lastName:"Jørgensen",
+//     eMail:"emil@student.cbs.dk", 
+//     username:"tilla", 
+//     password:"cbsmatch"
     
-}
-]
+// }
+// ]
 
 
 // Function for adding users 
