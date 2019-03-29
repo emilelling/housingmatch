@@ -1,4 +1,5 @@
 //Hard Code Hosts 
+// creat Host Class with properties firstname, lastname, email...
 
 var Hosts = []
 {
