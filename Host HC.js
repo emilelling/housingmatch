@@ -1,6 +1,6 @@
 //Hard Code Hosts 
 
-var Hosts =
+var Hosts = []
 {
     firstName = "Victoria",  
     lastName = "Baker", 
@@ -12,7 +12,7 @@ var Hosts =
     imagechoiceFirst =  "1",
     imagechoiceSecond ="4"
 
-}, 
+} 
 {
     firstName = "Fredrik ", 
     lastName = " Hansen",
@@ -23,7 +23,7 @@ var Hosts =
     location= " Nørrebro",
     imagechoiceFirst = "2,4",
     imagechoiceSecond ="4"
-}, 
+} 
 
 {
     firstName = "Phillip", 
@@ -35,7 +35,7 @@ var Hosts =
     location ="Amager", 
     imagechoiceFirst ="1",
     imagechoiceSecond = "3"
-},
+}
 
 {
     firstName="Louise",
@@ -48,7 +48,7 @@ var Hosts =
     imagechoiceFirst="2",
     imagechoiceSecond ="3"
 
-},
+}
 {
     firstName = "David",  
     lastName = "Sørensen", 
@@ -59,7 +59,7 @@ var Hosts =
     location = "Vestrebro",
     imagechoiceFirst =  "1",  
     imagechoiceSecond = "4"
-}, 
+}
 
 {
     firstName = "Sophie ", 
@@ -71,7 +71,7 @@ var Hosts =
     location= " Nørrebro",
     imagechoiceFirst = "2", 
     imagechoiceSecond ="4"
-}, 
+}
 
 {
     firstName = "Tyco", 
@@ -84,7 +84,7 @@ var Hosts =
     imagechoiceFirst ="1", 
     imagechoiceSecond ="3"
 
-}, 
+}
 
 
 {
@@ -99,9 +99,9 @@ var Hosts =
     imagechoiceSecond = "3"
 
 
-}, 
+}
 
-];
+
 
 
 

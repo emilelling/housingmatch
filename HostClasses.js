@@ -12,10 +12,12 @@ class Host{
         this.imagechoiceSecond = imagechoiceSecond; 
         
     }
-}
+   
+};
 
-createString() {
-    return this.firstName+ "" + 
-}
+
+
+
+
 
 
