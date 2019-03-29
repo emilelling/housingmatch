@@ -96,9 +96,6 @@ html, body {
 }
 
 .imageFirst:hover {
-    border-color: #308ae4;
-    border-style: solid;
-    border-width: 20px;
     opacity: 0.6;
 }
 
@@ -110,9 +107,6 @@ html, body {
 
 
 .imageSecond:hover {
-    border-color: #308ae4;
-    border-style: solid;
-    border-width: 20px;
     opacity: 0.6;
 }
 
