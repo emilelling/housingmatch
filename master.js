@@ -168,8 +168,11 @@ for (image of imagesSecond) {
     document.getElementById('moodpicturesSecond') .style.display = 'none';
     document.getElementById ('imageSubmit').style.display ='block';
 
-
   }
   
 }
 
+
+document.getElementById('imagebtn').onclick = function () {
+  window.location.href = "./match.html";
+}
