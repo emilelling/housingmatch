@@ -1,10 +1,12 @@
 //Hard Code Hosts 
 // creat Host Class with properties firstname, lastname, email...
 
-//var hostArray = []
+// var hostArray = []
 
-//hostArray.push(new Host("Victoria"...))
+// hostArray.push(new Host("Victoria","Baker", ))
 
+
+// this can be deleted after it is in the above
 var Hosts = 
 {
     firstName = "Victoria",  
