@@ -176,15 +176,8 @@ for (image of imagesSecond) {
     
     window.localStorage.setItem("users", JSON.stringify(users));
 
+    document.getElementById('imagebtn').onclick = function () {
+      window.location.href="./match.html";
+    }
   }
-
-  
-  
-  
-
-}
-
-
-document.getElementById('imagebtn').onclick = function () {
-  window.location.href = "./match.html";
 }
