@@ -14,8 +14,8 @@ class Host{
     }
 }
 
-createString() {
-    return this.firstName+ "" + 
-}
+// createString() {
+//     return this.firstName+ "" + 
+// }
 
 
