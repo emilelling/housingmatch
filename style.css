@@ -64,8 +64,14 @@ html, body {
     opacity: 0.6;
 }
 
+#imageSubmit {
+    display: none;
+}
+
 #registration {
+    text-align: center;
     display: block;
+    cursor: pointer;
 }
 
 h1{
@@ -107,16 +113,7 @@ p {
     color: #ffffff;
 }
 
-#imagebtn {
-    font-family:'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
-    padding: 15px;
-    width: 20%;
-    border: 1px solid rgb(15, 84, 121);
-    background-color: #308ae4;
-    cursor: pointer; /*the finger that appears when clicking on go*/
-    font-weight: bold;
-    color: #ffffff;
-}
+
 input[type="text"] {
     font-family:'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
     width: 100%;
