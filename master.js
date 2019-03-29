@@ -173,18 +173,17 @@ for (image of imagesSecond) {
   image.onclick = function() {
     console.log(this.dataset.itemid);
     activeUser.imagechoiceSecond = this.dataset.itemid
-    
+
     window.localStorage.setItem("users", JSON.stringify(users));
 
+    document.getElementById('moodpicturesFirst') .style.display = 'none';
+    document.getElementById('moodpicturesSecond') .style.display = 'none';
+    document.getElementById ('imageSubmit').style.display ='block';
+
+
+    document.getElementById('imagebtn').onclick = function() {
+      window.location.href = "./match.html";
+    }
   }
-
-  
-  
-  
-
 }
 
-
-document.getElementById('imagebtn').onclick = function () {
-  window.location.href = "./match.html";
-}
