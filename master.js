@@ -159,6 +159,8 @@ for (image of imagesSecond) {
 
   }
   
+  
+
 }
 
 // function checkBox () {
