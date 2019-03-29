@@ -78,6 +78,7 @@ submitUI.onclick = function () {
    document.getElementById('checkbox') .style.display = 'block';
    document.getElementById('moodpicturesFirst') .style.display = 'none';
    document.getElementById('moodpicturesSecond') .style.display = 'none';
+   document.getElementById('imageSubmit') .style.display ='none';
 
  }
 // Checkbox function
@@ -104,6 +105,7 @@ submitUI.onclick = function () {
          document.getElementById('checkbox') .style.display = 'none';
          document.getElementById('moodpicturesFirst') .style.display = 'block';
          document.getElementById('moodpicturesSecond') .style.display = 'none';
+         document.getElementById ('imageSubmit').style.display ='none';
       
 
          activeUser.levelofstudy = 'BA'
@@ -116,6 +118,8 @@ submitUI.onclick = function () {
          document.getElementById('checkbox') .style.display = 'none';
          document.getElementById('moodpicturesFirst') .style.display = 'block';
          document.getElementById('moodpicturesSecond') .style.display = 'none';
+         document.getElementById ('imageSubmit').style.display ='none';
+
   
      
          activeUser.levelofstudy = 'MA'
@@ -142,19 +146,12 @@ for (image of imagesFirst) {
     console.log(this.dataset.itemid);
     activeUser.imagechoiceFirst = this.dataset.itemid
 
-    // document.getElementById(this.dataset.itemid).style.border = '3px solid blue'
-
-    // setTimeout(() => {
-
-    //   // //disable click for 
-     
-
+ 
       document.getElementById('moodpicturesFirst') .style.display = 'none';
       document.getElementById('moodpicturesSecond') .style.display = 'block';
-
-    // }, 1500)
+      document.getElementById ('imageSubmit').style.display ='none';
     
-}
+  }
 }
 
 
@@ -166,6 +163,11 @@ for (image of imagesSecond) {
   image.onclick = function() {
     console.log(this.dataset.itemid);
     activeUser.imagechoiceSecond = this.dataset.itemid
+
+    document.getElementById('moodpicturesFirst') .style.display = 'none';
+    document.getElementById('moodpicturesSecond') .style.display = 'none';
+    document.getElementById ('imageSubmit').style.display ='block';
+
 
   }
   
