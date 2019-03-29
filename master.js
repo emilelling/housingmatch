@@ -45,6 +45,8 @@ submitUI.onclick = function () {
   var lastName = lastNameUI.value
   var username = usernameUI.value
   var password = passwordUI.value
+  var eMail =  eMailUI.value
+  
  //if(firstNameUI.value.length === 0 || lastNameUI.value.length === 0 || usernameUI.value.length === 0 || passwordUI.value.length === 0) {
  //alert ("You need to fill out the form");
  //return false;
