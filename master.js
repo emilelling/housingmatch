@@ -176,7 +176,6 @@ for (image of imagesSecond) {
     
     window.localStorage.setItem("users", JSON.stringify(users));
 
-
   }
 
   
@@ -186,7 +185,6 @@ for (image of imagesSecond) {
 }
 
 
-  
-  
-
-
+document.getElementById('imagebtn').onclick = function () {
+  window.location.href = "./match.html";
+}
