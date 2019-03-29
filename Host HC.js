@@ -1,6 +1,6 @@
 //Hard Code Hosts 
 
-var Hosts =[ 
+class Hosts  
 {
     firstName = "Victoria",  
     lastName = "Baker", 
