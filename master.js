@@ -80,7 +80,7 @@ submitUI.onclick = function () {
    document.getElementById('checkbox') .style.display = 'block';
    document.getElementById('moodpicturesFirst') .style.display = 'none';
    document.getElementById('moodpicturesSecond') .style.display = 'none';
-   document.getElementById('imageSubmit') .style.display ='none';
+   document.getElementById('imagesubmitbtn') .style.display ='none';
 
  }
 // Checkbox function
@@ -107,7 +107,7 @@ submitUI.onclick = function () {
          document.getElementById('checkbox') .style.display = 'none';
          document.getElementById('moodpicturesFirst') .style.display = 'block';
          document.getElementById('moodpicturesSecond') .style.display = 'none';
-         document.getElementById ('imageSubmit').style.display ='none';
+         document.getElementById ('imagesubmitbtn').style.display ='none';
       
 
          window.localStorage.setItem("users", JSON.stringify(users));
@@ -124,7 +124,7 @@ submitUI.onclick = function () {
          document.getElementById('checkbox') .style.display = 'none';
          document.getElementById('moodpicturesFirst') .style.display = 'block';
          document.getElementById('moodpicturesSecond') .style.display = 'none';
-         document.getElementById ('imageSubmit').style.display ='none';
+         document.getElementById ('imagesubmitbtn').style.display ='none';
 
   
      
@@ -159,7 +159,7 @@ for (image of imagesFirst) {
  
       document.getElementById('moodpicturesFirst') .style.display = 'none';
       document.getElementById('moodpicturesSecond') .style.display = 'block';
-      document.getElementById ('imageSubmit').style.display ='none';
+      document.getElementById ('imagesubmitbtn').style.display ='none';
     
   }
 }
@@ -178,7 +178,7 @@ for (image of imagesSecond) {
 
     document.getElementById('moodpicturesFirst') .style.display = 'none';
     document.getElementById('moodpicturesSecond') .style.display = 'none';
-    document.getElementById ('imageSubmit').style.display ='block';
+    document.getElementById ('imagesubmitbtn').style.display ='block';
 
 
     document.getElementById('imagebtn').onclick = function() {
