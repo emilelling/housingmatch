@@ -1,13 +1,10 @@
 
 // hard coded users
-var users=[
- {
-    firstName:"Amelie",
-    lastName:"Schwall",
-    eMail:"amelie@student.cbs.dk", 
-    username:"amelie", 
-    password:"12345678"
-},
+var users=[]
+
+users.push(new Users("Amelie", "Schwall", "amelie@student.cbs.dk", "amelie", "12345678", "levelofstudy", null, null ))
+ 
+// do for all users as above
 {
     firstName:"Tilla Marie",
     lastName:"Lønnum",
@@ -176,6 +173,7 @@ for (image of imagesSecond) {
 
     window.localStorage.setItem("users", JSON.stringify(users));
 
+    window.localStorage.setItem("activeUser", activeUser.username);
     document.getElementById('moodpicturesFirst') .style.display = 'none';
     document.getElementById('moodpicturesSecond') .style.display = 'none';
     document.getElementById ('imagesubmitbtn').style.display ='block';
