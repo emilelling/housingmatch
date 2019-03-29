@@ -45,14 +45,14 @@ submitUI.onclick = function () {
   var lastName = lastNameUI.value
   var username = usernameUI.value
   var password = passwordUI.value
- if(firstNameUI.value.length === 0 || lastNameUI.value.length === 0 || usernameUI.value.length === 0 || passwordUI.value.length === 0) {
- alert ("You need to fill out the form");
- return false;
- }
- if(passwordUI.value.length < 5) {
-    alert ("Your password is too short");
-    return false;
-   }
+ //if(firstNameUI.value.length === 0 || lastNameUI.value.length === 0 || usernameUI.value.length === 0 || passwordUI.value.length === 0) {
+ //alert ("You need to fill out the form");
+ //return false;
+ //}
+//  if(passwordUI.value.length < 5) {
+//     alert ("Your password is too short");
+//     return false;
+//    }
 
  if (true ||eMailUI.value.endsWith("@student.cbs.dk")){
     activeUser = {firstName: firstName, lastName: lastName, username: username, password: password}
@@ -78,6 +78,7 @@ submitUI.onclick = function () {
    document.getElementById('checkbox') .style.display = 'block';
    document.getElementById('moodpicturesFirst') .style.display = 'none';
    document.getElementById('moodpicturesSecond') .style.display = 'none';
+   document.getElementById('imageSubmit') .style.display ='none';
 
  }
 // Checkbox function
@@ -104,10 +105,15 @@ submitUI.onclick = function () {
          document.getElementById('checkbox') .style.display = 'none';
          document.getElementById('moodpicturesFirst') .style.display = 'block';
          document.getElementById('moodpicturesSecond') .style.display = 'none';
+         document.getElementById ('imageSubmit').style.display ='none';
       
 
+         window.localStorage.setItem("users", JSON.stringify(users));
+         JSON.parse(window.localStorage.getItem("users"));
          activeUser.levelofstudy = 'BA'
          return false;
+        
+         
      }
  
 
@@ -116,11 +122,17 @@ submitUI.onclick = function () {
          document.getElementById('checkbox') .style.display = 'none';
          document.getElementById('moodpicturesFirst') .style.display = 'block';
          document.getElementById('moodpicturesSecond') .style.display = 'none';
+         document.getElementById ('imageSubmit').style.display ='none';
+
   
      
+         window.localStorage.setItem("users", JSON.stringify(users));
+         JSON.parse(window.localStorage.getItem("users"));
          activeUser.levelofstudy = 'MA'
          return false;
+        
      }
+
 
     //  document.getElementById ('checkbox1')
     //  addEventListener("click", checkBox);
@@ -142,11 +154,14 @@ for (image of imagesFirst) {
     console.log(this.dataset.itemid);
     activeUser.imagechoiceFirst = this.dataset.itemid
 
-    document.getElementById('moodpicturesFirst') .style.display = 'none';
-    document.getElementById('moodpicturesSecond') .style.display = 'block';
+ 
+      document.getElementById('moodpicturesFirst') .style.display = 'none';
+      document.getElementById('moodpicturesSecond') .style.display = 'block';
+      document.getElementById ('imageSubmit').style.display ='none';
+    
   }
-  
 }
+
 
 
 // Image function 2
@@ -156,43 +171,20 @@ for (image of imagesSecond) {
   image.onclick = function() {
     console.log(this.dataset.itemid);
     activeUser.imagechoiceSecond = this.dataset.itemid
+    
+    window.localStorage.setItem("users", JSON.stringify(users));
+
 
   }
+
+  
   
   
 
 }
 
-// function checkBox () {
-//   var bachelor = document.getElementById("BA").checked;
-//   var master = document.getElementById("MA").checked;
-//       if (bachelor == false && master == false)
-//       {
-//          alert("Please check one box");
-//          return false; 
-//       }
+
   
-//      else if (bachelor == true && master == true)
-//       {
-//           alert("Please check just one box");
-//           return false; 
-//       }
   
 
-//       if ((document.getElementById("BA").checked == true) && (document.getElementById("MA").checked == false)) {
-//           document.getElementById('registration') .style.display ='none';
-//           document.getElementById('checkbox') .style.display = 'none';
-//           document.getElementById('moodpictures') .style.display = 'block';
-      
-//           return false;
-//       }
-  
 
-//       else if ((document.getElementById("BA").checked == false) && (document.getElementById("MA").checked == true)) {
-//           document.getElementById('registration') .style.display ='none';
-//           document.getElementById('checkbox') .style.display = 'none';
-//           document.getElementById('moodpictures') .style.display = 'block';
-      
-//           return false;
-//       }
-//     }   
