@@ -108,8 +108,12 @@ submitUI.onclick = function () {
          document.getElementById ('imageSubmit').style.display ='none';
       
 
+         window.localStorage.setItem("users", JSON.stringify(users));
+         JSON.parse(window.localStorage.getItem("users"));
          activeUser.levelofstudy = 'BA'
          return false;
+        
+         
      }
  
 
@@ -122,9 +126,13 @@ submitUI.onclick = function () {
 
   
      
+         window.localStorage.setItem("users", JSON.stringify(users));
+         JSON.parse(window.localStorage.getItem("users"));
          activeUser.levelofstudy = 'MA'
          return false;
+        
      }
+
 
     //  document.getElementById ('checkbox1')
     //  addEventListener("click", checkBox);
@@ -163,13 +171,15 @@ for (image of imagesSecond) {
   image.onclick = function() {
     console.log(this.dataset.itemid);
     activeUser.imagechoiceSecond = this.dataset.itemid
-
-    document.getElementById('moodpicturesFirst') .style.display = 'none';
-    document.getElementById('moodpicturesSecond') .style.display = 'none';
-    document.getElementById ('imageSubmit').style.display ='block';
+    
+    window.localStorage.setItem("users", JSON.stringify(users));
 
   }
+
   
+  
+  
+
 }
 
 
