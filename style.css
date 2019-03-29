@@ -40,12 +40,14 @@ html, body {
 #moodpicturesFirst{
     text-align: center;
     display: none;
+    cursor: pointer;
 }
 
 
 #moodpicturesSecond{
     text-align: center;
     display: none;
+    cursor: pointer;
 }
 
 #registration {
@@ -128,7 +130,19 @@ input[type="button"] {
     font-weight: bold;
     color: #ffffff;
 }
-    
+
+#checkboxbtn
+{
+    font-family:'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
+    padding: 15px;
+    width: 20%;
+    border: 1px solid rgb(15, 84, 121);
+    background-color: #308ae4;
+    cursor: pointer; /*the finger that appears when clicking on go*/
+    font-weight: bold;
+    color: #ffffff;
+}
+
 .actionSpan {
     font-family:'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
 }
