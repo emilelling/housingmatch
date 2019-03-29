@@ -92,14 +92,28 @@ html, body {
 #moodpicturesFirst{
     text-align: center;
     display: none;
-    cursor: pointer;
+    cursor: pointer;    
 }
 
+.imageFirst:hover {
+    border-color: #308ae4;
+    border-style: solid;
+    border-width: 20px;
+    opacity: 0.6;
+}
 
 #moodpicturesSecond{
     text-align: center;
     display: none;
     cursor: pointer;
+}
+
+
+.imageSecond:hover {
+    border-color: #308ae4;
+    border-style: solid;
+    border-width: 20px;
+    opacity: 0.6;
 }
 
 #registration {
