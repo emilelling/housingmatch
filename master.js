@@ -26,10 +26,10 @@ users.push(new Users("Amelie", "Schwall", "amelie@student.cbs.dk", "amelie", "12
 
 //matchHostArray = []
 /*for(i=0...) {
-if(activeUsers.levelofstudy == hostArray[i].levelofstudy && activeUser.imageChoiceFirst == hostArray[i].imagechoice){
+if(activeUsers.levelofstudy == hostArray[i].levelofstudy && activeUser.imageChoiceFirst == hostArray[i].imageChoiceFirst){
   matchArray.push(hostArray[i])
 
-else if(activeUsers.levelofstudy == hostArray[i].levelofstudy && activeUser.imageChoiceSecond == hostArray[i].imagechoice2)
+else if(activeUsers.levelofstudy == hostArray[i].levelofstudy && activeUser.imageChoiceSecond == hostArray[i].imageChoiceSecond)
 }
 }*/
 
