@@ -9,7 +9,8 @@ class Hosts
     password="victoria123", 
     price = "75000 DKK", 
     location = "Indre By",
-    imageValue =  "1,4"
+    imagechoiceFirst =  "1",
+    imagechoiceSecond ="4"
 
 }, 
 {
@@ -20,7 +21,8 @@ class Hosts
     password= "hansenfredrik", 
     price ="4300 DKK",
     location= " Nørrebro",
-    imageValue = "2,4"
+    imagechoiceFirst = "2,4",
+    imagechoiceSecond ="4"
 }, 
 
 {
@@ -31,7 +33,8 @@ class Hosts
     password ="thompsen123", 
     price="5450 DKK", 
     location ="Amager", 
-    imageValue ="1,3"
+    imagechoiceFirst ="1",
+    imagechoiceSecond = "3"
 },
 
 {
@@ -42,7 +45,8 @@ class Hosts
     password="lang123",
     price="6100 DKK", 
     location =" Fredriksberg", 
-    imageValue="2,3"
+    imagechoiceFirst="2",
+    imagechoiceSecond ="3"
 
 },
 {
@@ -53,7 +57,8 @@ class Hosts
     password="davidsørensen", 
     price = "6700 DKK", 
     location = "Vestrebro",
-    imageValue =  "1,4"
+    imagechoiceFirst =  "1",  
+    imagechoiceSecond = "4"
 }, 
 
 {
@@ -64,7 +69,8 @@ class Hosts
     password= "Sophieherman123", 
     price ="3800 DKK",
     location= " Nørrebro",
-    imageValue = "2,4"
+    imagechoiceFirst = "2", 
+    imagechoiceSecond ="4"
 }, 
 
 {
@@ -75,7 +81,8 @@ class Hosts
     password ="Beck123", 
     price="8000 DKK", 
     location ="Indreby", 
-    imageValue ="1,3" 
+    imagechoiceFirst ="1", 
+    imagechoiceSecond ="3"
 
 }, 
 
@@ -88,7 +95,8 @@ class Hosts
     password="watson23",
     price="4000 DKK", 
     location =" Østerbro", 
-    imageValue="2,3"
+    imagechoiceFirst="2",
+    imagechoiceSecond = "3"
 
 
 }, 
