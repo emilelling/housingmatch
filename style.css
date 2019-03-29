@@ -111,9 +111,12 @@ html, body {
 }
 
 #imageSubmit {
-    display: none;
     width: 25%;
     margin: 0px auto;   
+}
+
+#imagesubmitbtn {
+    display: none;
 }
 
 #registration {
