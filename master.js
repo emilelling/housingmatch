@@ -27,12 +27,15 @@ var users=[
 
 
 // Function for adding users 
-const firstNameUI = document.getElementById ('first-name')
-const lastNameUI = document.getElementById ('last-name')
-const usernameUI = document.getElementById ('username')
-const passwordUI = document.getElementById ('password')
+const firstNameUI = document.getElementById('first-name')
+const lastNameUI = document.getElementById('last-name')
+const usernameUI = document.getElementById('username')
+const passwordUI = document.getElementById('password')
 const eMailUI = document.getElementById('e-mail')
 const submitUI = document.getElementById('submit')
+// const bachelorUI = document.getElementById('BA')
+// const masterUI = document.getElementById('MA')
+// const checkBoxUI = document.getElementById ('checkbox1')
 
 
 var activeUser
@@ -73,10 +76,13 @@ submitUI.onclick = function () {
 
    document.getElementById('registration') .style.display ='none';
    document.getElementById('checkbox') .style.display = 'block';
-   document.getElementById('moodpictures') .style.display = 'none';
+   document.getElementById('moodpicturesFirst') .style.display = 'none';
+   document.getElementById('moodpicturesSecond') .style.display = 'none';
+
  }
 // Checkbox function
  function checkBox () {
+ 
  var bachelor = document.getElementById("BA").checked;
  var master = document.getElementById("MA").checked;
      if (bachelor == false && master == false)
@@ -92,11 +98,15 @@ submitUI.onclick = function () {
      }
  
 
+
      if ((document.getElementById("BA").checked == true) && (document.getElementById("MA").checked == false)) {
          document.getElementById('registration') .style.display ='none';
          document.getElementById('checkbox') .style.display = 'none';
-         document.getElementById('moodpictures') .style.display = 'block';
-     
+         document.getElementById('moodpicturesFirst') .style.display = 'block';
+         document.getElementById('moodpicturesSecond') .style.display = 'none';
+      
+
+         activeUser.levelofstudy = 'BA'
          return false;
      }
  
@@ -104,19 +114,51 @@ submitUI.onclick = function () {
      else if ((document.getElementById("BA").checked == false) && (document.getElementById("MA").checked == true)) {
          document.getElementById('registration') .style.display ='none';
          document.getElementById('checkbox') .style.display = 'none';
-         document.getElementById('moodpictures') .style.display = 'block';
+         document.getElementById('moodpicturesFirst') .style.display = 'block';
+         document.getElementById('moodpicturesSecond') .style.display = 'none';
+  
      
+         activeUser.levelofstudy = 'MA'
          return false;
      }
 
-// Image function
-const images = document.getElementsByClassName('image')
-for (image of images) {
+    //  document.getElementById ('checkbox1')
+    //  addEventListener("click", checkBox);
+    //  function () {
+    //   window.localStorage.setItem("users", JSON.stringify(users));
+    //   JSON.parse(window.localStorage.getItem("users"));
+    }
+     
+
+     
+
+     
+
+// Image function 1
+const imagesFirst = document.getElementsByClassName('imageFirst')
+
+for (image of imagesFirst) {
   image.onclick = function() {
     console.log(this.dataset.itemid);
+    activeUser.imagechoiceFirst = this.dataset.itemid
+
+    document.getElementById('moodpicturesFirst') .style.display = 'none';
+    document.getElementById('moodpicturesSecond') .style.display = 'block';
+  }
+  
+}
+
+
+// Image function 2
+const imagesSecond = document.getElementsByClassName('imageSecond')
+
+for (image of imagesSecond) {
+  image.onclick = function() {
+    console.log(this.dataset.itemid);
+    activeUser.imagechoiceSecond = this.dataset.itemid
 
   }
-}
+  
 }
 
 // function checkBox () {
