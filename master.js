@@ -1,55 +1,4 @@
 
-// hard coded users
-var users=[]
-
-users.push(new Users("Amelie", "Schwall", "amelie@student.cbs.dk", "amelie", "12345678", "levelofstudy", null, null ))
- 
-// do for all users as above
-// {
-//     firstName:"Tilla Marie",
-//     lastName:"Lønnum",
-//     eMail:"tilla@student.cbs.dk", 
-//     username:"tilla", 
-//     password:"cbsmatch"
-// },
-// {
-//     firstName:"Emil Elling",
-//     lastName:"Jørgensen",
-//     eMail:"emil@student.cbs.dk", 
-//     username:"tilla", 
-//     password:"cbsmatch"
-    
-// }
-// ]
-
-// this should be in the class as method
-
-//matchHostArray = []
-/*for(i=0...) {
-if(activeUsers.levelofstudy == hostArray[i].levelofstudy && activeUser.imageChoiceFirst == hostArray[i].imageChoiceFirst){
-  matchArray.push(hostArray[i])
-
-else if(activeUsers.levelofstudy == hostArray[i].levelofstudy && activeUser.imageChoiceSecond == hostArray[i].imageChoiceSecond)
-}
-}*/
-
- //retrieved from method in class
-
- var htmlString = ""
- var span1 = document.getElementById('match1')
- var span2 = document.getElementById('match2')
- 
- // Will run through every item in the random array and push to string
- //matchedHostArray refers to the array of hosts that match the user
-
-
- for (i=0; i < matchedHostArray.length; i++){
-  htmlString += matchedHostArray[i].createString()
- }
- //Push to html
- span1 += htmlString
-
-
 // Function for adding users 
 const firstNameUI = document.getElementById('first-name')
 const lastNameUI = document.getElementById('last-name')
@@ -168,9 +117,6 @@ submitUI.onclick = function () {
     }
      
 
-     
-
-     
 
 // Image function 1
 const imagesFirst = document.getElementsByClassName('imageFirst')
