@@ -10,10 +10,18 @@ class Users {
     this.imagechoiceSecond =imagechoiceSecond;
     }
 
-    createString () {
-    return this.firstName + "" + this.lastName 
-    }
+    // createString () {
+    // return this.firstName + "" + this.lastName 
+    // }
 
 }
 
+var users=[]
+
+users.push(new Users
+  ("Amelie", "Schwall", "amsc15ab@student.cbs.dk", "amelie", "cbsmatch2", "levelofstudy", null, null ), 
+  ("Tilla Marie", "Lønnum", "illa@student.cbs.dk", "tilla", "cbsmatch2", "levelofstudy", null, null),
+  ("Emil Elling", "Jørgensen", "emil@student.cbs.dk", "emil", "cbsmatch3", "levelofstudy", null, null)
+  )
+ 
 
