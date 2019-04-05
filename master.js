@@ -6,12 +6,11 @@ const usernameUI = document.getElementById('username')
 const passwordUI = document.getElementById('password')
 const eMailUI = document.getElementById('e-mail')
 const submitUI = document.getElementById('submit')
-// const bachelorUI = document.getElementById('BA')
-// const masterUI = document.getElementById('MA')
+//const bachelorUI = document.getElementById('BA')
+//const masterUI = document.getElementById('MA')
 // const checkBoxUI = document.getElementById ('checkbox1')
 
 
-var activeUser
 submitUI.onclick = function () {
   console.log(activeUser)
   var firstName = firstNameUI.value
@@ -31,10 +30,11 @@ submitUI.onclick = function () {
 
  if (true ||eMailUI.value.endsWith("@student.cbs.dk")){
     // activeUser = {firstName: firstName, lastName: lastName, eMail: eMail, username: username, password: password}
-  activeUser = new Users (firstName, lastName, username, password, eMail, null, null, null)
+  activeUser.push(new Users (firstName, lastName, username, password, eMail, null, null, null))
      users.push(activeUser);
      console.log(users);
-    
+     
+    // localStorage.setItem ("activeuser", JSON.stringify(activeUser))
    }
  else {
    // firstNameUI.value ="";
@@ -44,8 +44,8 @@ submitUI.onclick = function () {
    alert ("Please enter a valid CBS email");
    }
 
-   window.localStorage.setItem("users", JSON.stringify(users));
-   JSON.parse(window.localStorage.getItem("users"));
+  //  window.localStorage.setItem("users", JSON.stringify(users));
+  //  JSON.parse(window.localStorage.getItem("users"));
 
    document.getElementById('registration') .style.display ='none';
    document.getElementById('checkbox') .style.display = 'block';
@@ -81,9 +81,10 @@ submitUI.onclick = function () {
          document.getElementById ('imagesubmitbtn').style.display ='none';
       
 
-         window.localStorage.setItem("users", JSON.stringify(users));
-         JSON.parse(window.localStorage.getItem("users"));
-         activeUser.levelofstudy = 'BA'
+        //  window.localStorage.setItem("users", JSON.stringify(users));
+        //  JSON.parse(window.localStorage.getItem("users"));
+         activeUser[0].levelofstudy = 'BA'
+         console.log(activeUser)
          return false;
         
          
@@ -99,9 +100,10 @@ submitUI.onclick = function () {
 
   
      
-         window.localStorage.setItem("users", JSON.stringify(users));
-         JSON.parse(window.localStorage.getItem("users"));
-         activeUser.levelofstudy = 'MA'
+        //  window.localStorage.setItem("users", JSON.stringify(users));
+        //  JSON.parse(window.localStorage.getItem("users"));
+         activeUser[0].levelofstudy = 'MA'
+         console.log(activeUser)
          return false;
         
      }
@@ -122,7 +124,7 @@ const imagesFirst = document.getElementsByClassName('imageFirst')
 for (image of imagesFirst) {
   image.onclick = function() {
     console.log(this.dataset.itemid);
-    activeUser.imagechoiceFirst = this.dataset.itemid
+    activeUser[0].imagechoiceFirst = this.dataset.itemid
 
  
       document.getElementById('moodpicturesFirst') .style.display = 'none';
@@ -140,11 +142,11 @@ const imagesSecond = document.getElementsByClassName('imageSecond')
 for (image of imagesSecond) {
   image.onclick = function() {
     console.log(this.dataset.itemid);
-    activeUser.imagechoiceSecond = this.dataset.itemid
+    activeUser[0].imagechoiceSecond = this.dataset.itemid
 
     window.localStorage.setItem("users", JSON.stringify(users));
 
-    window.localStorage.setItem("activeUser", activeUser.username);
+    window.localStorage.setItem("activeuser", JSON.stringify(activeUser));
     document.getElementById('moodpicturesFirst') .style.display = 'none';
     document.getElementById('moodpicturesSecond') .style.display = 'none';
     document.getElementById ('imagesubmitbtn').style.display ='block';
