@@ -25,4 +25,3 @@ hosts.push(new Host   ("David", "Sørensen", "davidsørsensen@student.cbs.dk", "
 hosts.push(new Host   ("Sophie ", "Herman", "sophieherman.cbs.dk", "Sophie.herman", "Sophieherman123", "3800 DKK", "Nørrebro", "MA", "2", "4"))
 hosts.push(new Host  ("Tyco", "Beck", "tycobeck@student.cbs.dk", "Tyco", "Beck123", "6000 DKK", "Indreby", "MA", "1", "3"))
 hosts.push(new Host  ("Lucy", "Watson", "lucyWatson@student.cbs.dk", "Lucywatson", "watson23","4000 DKK", "Østerbro", "BA", "2", "3"))
-hosts.push(new Host  ("Lucy", "Watson", "lucyWatson@student.cbs.dk", "Lucywatson", "watson23","4000 DKK", "Østerbro", "BA", "1", "3"))
