@@ -10,6 +10,8 @@ class Users {
     this.imagechoiceSecond =imagechoiceSecond;
     }
 
+
+    // constructor (properties you have) not same as variable (is just a label)
     // createString () {
     // return this.firstName + "" + this.lastName 
     // }
@@ -19,9 +21,9 @@ class Users {
 var users=[]
 
 users.push(new Users
-  ("Amelie", "Schwall", "amsc15ab@student.cbs.dk", "amelie", "cbsmatch2", "levelofstudy", null, null ), 
-  ("Tilla Marie", "Lønnum", "illa@student.cbs.dk", "tilla", "cbsmatch2", "levelofstudy", null, null),
-  ("Emil Elling", "Jørgensen", "emil@student.cbs.dk", "emil", "cbsmatch3", "levelofstudy", null, null)
+  ("Amelie", "Schwall", "amsc15ab@student.cbs.dk", "amelie", "cbsmatch2", null, null, null ), 
+  ("Tilla Marie", "Lønnum", "illa@student.cbs.dk", "tilla", "cbsmatch2", null, null, null),
+  ("Emil Elling", "Jørgensen", "emil@student.cbs.dk", "emil", "cbsmatch3", null, null, null)
   )
  
 
