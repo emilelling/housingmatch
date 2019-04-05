@@ -64,6 +64,7 @@ html, body {
     margin-left: 50px;
     float: left;
     background-color: lightgray;
+    display: block;
 }
 
 #match2 {
@@ -73,7 +74,30 @@ html, body {
     margin-right: 50px;
     overflow: hidden;
     background-color: lightgray;
+    display: block;
 }
+
+#match3 {
+    width: 350px;
+    min-height: 600px;
+    overflow: hidden;
+    margin-left: 50px;
+    float: left;
+    background-color: lightgray;
+    display: none;
+}
+
+#match4 {
+    width: 350px;
+    min-height: 600px;
+    float: right;
+    margin-right: 50px;
+    overflow: hidden;
+    background-color: lightgray;
+    display: none;
+}
+
+
 
 #center {
     width: 500px;
@@ -117,7 +141,7 @@ html, body {
 
 #imagesubmitbtn {
     display: none;
-}
+}   
 
 #registration {
     text-align: center;
