@@ -109,11 +109,6 @@ submitUI.onclick = function () {
      }
 
 
-    //  document.getElementById ('checkbox1')
-    //  addEventListener("click", checkBox);
-    //  function () {
-    //   window.localStorage.setItem("users", JSON.stringify(users));
-    //   JSON.parse(window.localStorage.getItem("users"));
     }
      
 
