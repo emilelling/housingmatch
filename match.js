@@ -16,7 +16,7 @@ matchArray = []
 //   console.log(hosts[i].name)
 // }
 
-// the two above are the same as the callback function below
+// the two above are the same as the filter function below
 
 var activeUser = JSON.parse(localStorage.getItem('activeuser'))
 console.log(activeUser)
