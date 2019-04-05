@@ -17,7 +17,7 @@ class Host{
 
 var hosts=[]
 
-hosts.push (new Host) (
+hosts.push (new Host
     ("Victoria", "Baker", "victoriabaker@student.cbs.dk","Viccy", "victoria123", "75000 DKK","Indre By", "BA", "1", "4"),
     ("Fredrik", "Hansen","fredrikhansen@student.cbs.dk","Fred","hansenfredrik", "4300 DKK", "Nørrebro", "MA","2", "4"), 
     ("Phillip", "Thompsen", "phillip.th@student.cbs.dk", "Phillip-Th", "thompsen123", "5450 DKK", "Amager","MA", "1", "3"),
@@ -27,10 +27,3 @@ hosts.push (new Host) (
     ("Tyco", "Beck", "tycobeck@student.cbs.dk", "Tyco", "Beck123", "6000 DKK", "Indreby", "MA", "1", "3"), 
     ("Lucy", "Watson", "lucyWatson@student.cbs.dk", "Lucywatson", "watson23","4000 DKK", "Østerbro", "BA", "2", "3")
 )
-
-
-
-
-
-
-
