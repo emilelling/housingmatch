@@ -18,20 +18,19 @@ matchArray = []
 
 // the two above are the same as the callback function below
 
-
+var activeUser = JSON.parse(localStorage.getItem('activeuser'))
+console.log(activeUser)
+console.log(hosts)
   const filteredHosts = hosts.filter(function (host) {
-    return host.levelofstudy == activeUser.levelofstudy 
+    return host.levelofstudy == activeUser[0].levelofstudy 
+  }) 
+
+  const filteredHostImg = filteredHosts.filter (function (host) {
+    return host.imagechoiceFirst == activeUser[0].imagechoiceFirst || host.imagechoiceSecond == activeUser[0].imagechoiceSecond
   })
 
-  console.log(filteredHosts)
+console.log(filteredHostImg)
 
-//   if(activeUser.levelofstudy == hosts[i].levelofstudy && activeUser.imageChoiceFirst == hosts[i].imageChoiceFirst){
-//   matchArray.push(hosts[i])
-//   }
-
-//   else if(activeUsers.levelofstudy == hosts[i].levelofstudy && activeUser.imageChoiceSecond == hosts[i].imageChoiceSecond) {
-//   matchArray.push(hosts[i])
-//   }
 
 
 //  //retrieved from method in class
