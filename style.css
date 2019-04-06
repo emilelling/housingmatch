@@ -59,42 +59,46 @@ html, body {
 
 #match1 {
     width: 350px;
-    min-height: 600px;
+    min-height: 300px;
     overflow: hidden;
     margin-left: 50px;
     float: left;
-    background-color: lightgray;
+    background-color: rgb(238, 238, 238);
     display: block;
+    line-height: 2;
 }
 
 #match2 {
     width: 350px;
-    min-height: 600px;
+    min-height: 300px;
     float: right;
     margin-right: 50px;
     overflow: hidden;
-    background-color: lightgray;
+    background-color: rgb(238, 238, 238);
     display: block;
+    line-height: 2;
 }
 
 #match3 {
     width: 350px;
-    min-height: 600px;
+    min-height: 300px;
     overflow: hidden;
     margin-left: 50px;
     float: left;
-    background-color: lightgray;
+    background-color: rgb(238, 238, 238);
     display: none;
+    line-height: 2;
 }
 
 #match4 {
     width: 350px;
-    min-height: 600px;
+    min-height: 300px;
     float: right;
     margin-right: 50px;
     overflow: hidden;
-    background-color: lightgray;
+    background-color: rgb( 238, 238, 238);
     display: none;
+    line-height: 2;
 }
 
 
