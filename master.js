@@ -6,6 +6,7 @@ const usernameUI = document.getElementById('username')
 const passwordUI = document.getElementById('password')
 const eMailUI = document.getElementById('e-mail')
 const submitUI = document.getElementById('submit')
+const loginUI = document.getElementById ('login')
 //const bachelorUI = document.getElementById('BA')
 //const masterUI = document.getElementById('MA')
 // const checkBoxUI = document.getElementById ('checkbox1')
@@ -19,6 +20,7 @@ submitUI.onclick = function () {
   var password = passwordUI.value
   var eMail =  eMailUI.value
   
+ // activate later!! 
  //if(firstNameUI.value.length === 0 || lastNameUI.value.length === 0 || usernameUI.value.length === 0 || passwordUI.value.length === 0) {
  //alert ("You need to fill out the form");
  //return false;
@@ -54,6 +56,35 @@ submitUI.onclick = function () {
    document.getElementById('imagesubmitbtn') .style.display ='none';
 
  }
+
+// Login function 
+
+loginUI.onclick = function () {
+  console.log ('loginUser')
+
+  var inputUsername = document.getElementById("usernameLogin").value;
+  var inputPassword = document.getElementById("passwordLogin").value;
+
+  if (inputPassword.length < 1 || inputUsername.length < 1) {
+      alert("You should input something");
+      return false;
+  }
+
+  for (let i = 0; i < users.length; i ++) {
+    if //we want to check if the username and password already excist in the local storage {  
+        alert('Login is correct')
+        localStorage.setItem('activeUser', JSON.stringify(users[i]));
+        document.getElementById('registration') .style.display ='none';
+        document.getElementById('checkbox') .style.display = 'block';
+        document.getElementById('moodpicturesFirst') .style.display = 'none';
+        document.getElementById('moodpicturesSecond') .style.display = 'none';
+        document.getElementById('imagesubmitbtn') .style.display ='none';
+        return true;
+    }
+}
+
+}   
+ 
 // Checkbox function
  function checkBox () {
  
