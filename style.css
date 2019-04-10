@@ -30,6 +30,166 @@ html, body {
     margin-top: 75px;
 }
 
+
+#registration {
+    text-align: center;
+    display: block;
+    cursor: pointer;
+}
+
+h1{
+    text-align: center;
+    color: #000;
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    color: rgb(6, 47, 161);
+    font-size: 30px;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+* {
+    box-sizing: border-box;
+
+}
+
+p {
+    text-align: center;
+    color: #000;
+    font-size: 15px;
+}
+
+#submit {
+    font-family:'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
+    width: 15%;
+    padding: 15px;
+    border: 1px solid rgb(15, 84, 121);
+    background-color: #308ae4;
+    cursor: pointer; /*the finger that appears when clicking on go*/
+    font-weight: bold;
+    color: #ffffff;
+}
+
+#login {
+    font-family: 'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
+    width: 15%;
+    padding: 15px;
+    border: 1px solid rgb(15, 84, 121);
+    background-color: #308ae4;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+input[type="text"] {
+    font-family:'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid rgb(15, 84, 121);
+    margin-bottom: 15px;
+    box-sizing:border-box;
+}
+    
+input[type="password"] {
+    font-family:'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid rgb(15, 84, 121);
+    margin-bottom: 15px;
+    box-sizing:border-box;
+}
+input[type="button"] {
+    font-family:'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid rgb(15, 84, 121);
+    background-color: #308ae4;
+    cursor: pointer; /*the finger that appears when clicking on go*/
+    font-weight: bold;
+    color: #ffffff;
+}
+
+
+#center {
+    width: 500px;
+    margin-left: 100px;
+    position: absolute;
+    top: 30%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#checkbox{
+    text-align: center;
+    display: none;
+}
+
+#moodpicturesFirst{
+    text-align: center;
+    display: none;
+    cursor: pointer;    
+}
+
+.imageFirst:hover {
+    opacity: 0.6;
+}
+
+#moodpicturesSecond{
+    text-align: center;
+    display: none;
+    cursor: pointer;
+}
+
+
+.imageSecond:hover {
+    opacity: 0.6;
+}
+
+#imageSubmit {
+    width: 25%;
+    margin: 0px auto;   
+}
+
+#imagesubmitbtn {
+    display: none;
+}   
+
+
+#checkboxbtn
+{
+    font-family:'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
+    padding: 15px;
+    width: 20%;
+    border: 1px solid rgb(15, 84, 121);
+    background-color: #308ae4;
+    cursor: pointer; /*the finger that appears when clicking on go*/
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.actionSpan {
+    font-family:'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
+}
+
+
+img {
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    border: 2px;
+}
+
 .arrows{
     width: 30px;
     height: 30px;
@@ -103,149 +263,3 @@ html, body {
 
 
 
-#center {
-    width: 500px;
-    margin-left: 100px;
-    position: absolute;
-    top: 30%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
-#checkbox{
-    text-align: center;
-    display: none;
-}
-
-#moodpicturesFirst{
-    text-align: center;
-    display: none;
-    cursor: pointer;    
-}
-
-.imageFirst:hover {
-    opacity: 0.6;
-}
-
-#moodpicturesSecond{
-    text-align: center;
-    display: none;
-    cursor: pointer;
-}
-
-
-.imageSecond:hover {
-    opacity: 0.6;
-}
-
-#imageSubmit {
-    width: 25%;
-    margin: 0px auto;   
-}
-
-#imagesubmitbtn {
-    display: none;
-}   
-
-#registration {
-    text-align: center;
-    display: block;
-    cursor: pointer;
-}
-
-h1{
-    text-align: center;
-    color: #000;
-    font-size: 50px;
-}
-
-h2 {
-    font-size: 30px;
-    text-align: center;
-}
-
-h3 {
-    text-align: center;
-    color: #000;
-    font-size: 25px;
-}
-
-a {
-    text-decoration: none;
-
-}
-
-* {
-    box-sizing: border-box;
-
-}
-
-p {
-    text-align: center;
-    color: #000;
-    font-size: 15px;
-}
-
-#submit {
-    font-family:'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
-    width: 15%;
-    padding: 15px;
-    border: 1px solid rgb(15, 84, 121);
-    background-color: #308ae4;
-    cursor: pointer; /*the finger that appears when clicking on go*/
-    font-weight: bold;
-    color: #ffffff;
-}
-
-
-input[type="text"] {
-    font-family:'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
-    width: 100%;
-    padding: 15px;
-    border: 1px solid rgb(15, 84, 121);
-    margin-bottom: 15px;
-    box-sizing:border-box;
-}
-    
-input[type="password"] {
-    font-family:'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
-    width: 100%;
-    padding: 15px;
-    border: 1px solid rgb(15, 84, 121);
-    margin-bottom: 15px;
-    box-sizing:border-box;
-}
-input[type="button"] {
-    font-family:'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
-    width: 100%;
-    padding: 15px;
-    border: 1px solid rgb(15, 84, 121);
-    background-color: #308ae4;
-    cursor: pointer; /*the finger that appears when clicking on go*/
-    font-weight: bold;
-    color: #ffffff;
-}
-
-#checkboxbtn
-{
-    font-family:'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
-    padding: 15px;
-    width: 20%;
-    border: 1px solid rgb(15, 84, 121);
-    background-color: #308ae4;
-    cursor: pointer; /*the finger that appears when clicking on go*/
-    font-weight: bold;
-    color: #ffffff;
-}
-
-.actionSpan {
-    font-family:'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
-}
-
-
-img {
-    width: 200px;
-    height: 200px;
-    padding: 20px;
-    border: 2px;
-}
