@@ -62,28 +62,55 @@ submitUI.onclick = function () {
 loginUI.onclick = function () {
   console.log ('loginUser')
 
-  var inputUsername = document.getElementById("usernameLogin").value;
-  var inputPassword = document.getElementById("passwordLogin").value;
+// retreive data from username and passowrd and store in username/password variable
+  let inputUsername = document.getElementById('username').value;
+  let inputPassword = document.getElementById('password').value;
 
   if (inputPassword.length < 1 || inputUsername.length < 1) {
       alert("You should input something");
       return false;
   }
 
-  for (let i = 0; i < users.length; i ++) {
-    if //we want to check if the username and password already excist in the local storage {  
-        alert('Login is correct')
-        localStorage.setItem('activeUser', JSON.stringify(users[i]));
-        document.getElementById('registration') .style.display ='none';
-        document.getElementById('checkbox') .style.display = 'block';
-        document.getElementById('moodpicturesFirst') .style.display = 'none';
-        document.getElementById('moodpicturesSecond') .style.display = 'none';
-        document.getElementById('imagesubmitbtn') .style.display ='none';
-        return true;
+  if (localStorage.getItem('user' === null)) {
+    users = [
+      // hardcoded user
+      new User ('Amelie', 'Schwall', 'amsc15ab@student.cbs.dk', 'cbsmatch')
+    ];
+    localStorage.setItem('users',JSON.stringify(users));
+  }
+  else {
+    users = JSON.parse(localStorage.getItem('users'));
+    for (let i = 0; i < users.length; i++) {
+      users[i] = new User(users[i].firstName, users[i].lastName, users[i].eMail, users[i].username, users[i].password);
     }
+ }
+
+// loop through all the user objects and confrim if the username and password are correct
+for(var i = 0; i < users.length; i++) {
+  // check to
+  if(inputUsername == users[i].username && inputPassword == users[i].password) {
+      alert(`Welcome ${username}`);
+      // stop the statement if result is found true - this was a return in the video, break is best practice here
+  }
+}
+// error if username and password don’t match
+alert('Incorrect username or password');
 }
 
-}   
+
+//   for (let i = 0; i < users.length; i ++) {
+//     if //we want to check if the username and password already excist in the local storage {  
+//         alert('Login is correct')
+//         localStorage.setItem('activeUser', JSON.stringify(users[i]));
+//         document.getElementById('registration') .style.display ='none';
+//         document.getElementById('checkbox') .style.display = 'block';
+//         document.getElementById('moodpicturesFirst') .style.display = 'none';
+//         document.getElementById('moodpicturesSecond') .style.display = 'none';
+//         document.getElementById('imagesubmitbtn') .style.display ='none';
+//         return true;
+//     }
+// }
+   
  
 // Checkbox function
  function checkBox () {
