@@ -128,6 +128,7 @@ input[type="button"] {
     width: 40%;
     float: right;
     margin-top: -50px;
+    display: block; 
 }
 
 .alignloginreg {
