@@ -231,6 +231,7 @@ img {
     background-color: rgb(238, 238, 238);
     display: block;
     line-height: 2;
+    border-radius: 25px;
 }
 
 #match2 {
@@ -242,6 +243,7 @@ img {
     background-color: rgb(238, 238, 238);
     display: block;
     line-height: 2;
+    border-radius: 25px;
 }
 
 #match3 {
@@ -253,6 +255,7 @@ img {
     background-color: rgb(238, 238, 238);
     display: none;
     line-height: 2;
+    border-radius: 25px;
 }
 
 #match4 {
@@ -264,6 +267,7 @@ img {
     background-color: rgb( 238, 238, 238);
     display: none;
     line-height: 2;
+    border-radius: 25px;
 }
 
 
