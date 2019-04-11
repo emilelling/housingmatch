@@ -32,7 +32,7 @@ submitUI.onclick = function () {
 
  if (true ||eMailUI.value.endsWith("@student.cbs.dk")){
     // activeUser = {firstName: firstName, lastName: lastName, eMail: eMail, username: username, password: password}
-  activeUser.push(new User (firstName, lastName, username, password, eMail, null, null, null))
+  activeUser.push(new Users(firstName, lastName, username, password, eMail, null, null, null))
      users.push(activeUser);
      console.log(users);
      
