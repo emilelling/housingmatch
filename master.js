@@ -54,7 +54,7 @@ submitUI.onclick = function () {
    document.getElementById('moodpicturesFirst') .style.display = 'none';
    document.getElementById('moodpicturesSecond') .style.display = 'none';
    document.getElementById('imagesubmitbtn') .style.display ='none';
-
+   document.getElementById('loginfunction') .style.display ='none';
  }
 
 // Login function 
@@ -95,6 +95,7 @@ for(var i = 0; i < users.length; i++) {
 }
 // error if username and password don’t match
 alert('Incorrect username or password');
+
 }
 
 
