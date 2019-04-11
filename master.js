@@ -32,7 +32,7 @@ submitUI.onclick = function () {
 
  if (true ||eMailUI.value.endsWith("@student.cbs.dk")){
     // activeUser = {firstName: firstName, lastName: lastName, eMail: eMail, username: username, password: password}
-  activeUser.push(new Users (firstName, lastName, username, password, eMail, null, null, null))
+  activeUser.push(new User (firstName, lastName, username, password, eMail, null, null, null))
      users.push(activeUser);
      console.log(users);
      
@@ -59,44 +59,31 @@ submitUI.onclick = function () {
 
 // Login function 
 
+var activeUser = JSON.parse(localStorage.getItem('activeuser'))
+console.log(activeUser)
+
 loginUI.onclick = function () {
   console.log ('loginUser')
 
-// retreive data from username and passowrd and store in username/password variable
-  let inputUsername = document.getElementById('username').value;
-  let inputPassword = document.getElementById('password').value;
+  // retreive data from username and passowrd and store in username/password variable
+let inputUsername = document.getElementById('username').value;
+let inputPassword = document.getElementById('password').value;
 
-  if (inputPassword.length < 1 || inputUsername.length < 1) {
-      alert("You should input something");
-      return false;
-  }
+if (inputPassword.length < 1 || inputUsername.length < 1) {
+    alert("You should input something");
+  
+}
 
-  if (localStorage.getItem('user' === null)) {
-    users = [
-      // // hardcoded user
-      // new User ('Amelie', 'Schwall', 'amsc15ab@student.cbs.dk', 'cbsmatch')
-    ];
-    localStorage.setItem('users',JSON.stringify(users));
-  }
-  else {
-    users = JSON.parse(localStorage.getItem('users'));
+else if (activeUser = JSON.parse(localStorage.getItem('activeuser'))) {
     for (let i = 0; i < users.length; i++) {
-      users[i] = new User(users[i].firstName, users[i].lastName, users[i].eMail, users[i].username, users[i].password);
+      activeUser[i] = new User (activeUser[i].firstName, activeUser[i].lastName, activeUser[i].eMail, activeUser[i].username, activeUser[i].password);
     }
  }
 
-// loop through all the user objects and confrim if the username and password are correct
-for(var i = 0; i < users.length; i++) {
-  // check to
-  if(inputUsername == users[i].username && inputPassword == users[i].password) {
-      alert(`Welcome ${username}`);
-      // stop the statement if result is found true - this was a return in the video, break is best practice here
-  }
-}
-// error if username and password don’t match
-alert('Incorrect username or password');
-
-}
+document.getElementById('login').onclick = function() {
+      window.location.href = "./match.html";
+}   
+}  
 
 
 //   for (let i = 0; i < users.length; i ++) {
