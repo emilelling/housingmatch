@@ -73,8 +73,8 @@ loginUI.onclick = function () {
 
   if (localStorage.getItem('user' === null)) {
     users = [
-      // hardcoded user
-      new User ('Amelie', 'Schwall', 'amsc15ab@student.cbs.dk', 'cbsmatch')
+      // // hardcoded user
+      // new User ('Amelie', 'Schwall', 'amsc15ab@student.cbs.dk', 'cbsmatch')
     ];
     localStorage.setItem('users',JSON.stringify(users));
   }
