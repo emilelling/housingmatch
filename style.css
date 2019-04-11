@@ -30,13 +30,6 @@ html, body {
     margin-top: 75px;
 }
 
-
-#registration {
-    text-align: center;
-    display: block;
-    cursor: pointer;
-}
-
 h1{
     text-align: center;
     color: #000;
@@ -70,18 +63,9 @@ p {
     font-size: 15px;
 }
 
-#submit {
-    font-family:'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
-    width: 15%;
-    padding: 15px;
-    border: 1px solid rgb(15, 84, 121);
-    background-color: #308ae4;
-    cursor: pointer; /*the finger that appears when clicking on go*/
-    font-weight: bold;
-    color: #ffffff;
-}
 
-#login {
+
+/* #login {
     font-family: 'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
     width: 15%;
     padding: 15px;
@@ -90,7 +74,7 @@ p {
     cursor: pointer;
     font-weight: bold;
     color: #ffffff;
-}
+} */
 
 input[type="text"] {
     font-family:'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
@@ -109,13 +93,14 @@ input[type="password"] {
     margin-bottom: 15px;
     box-sizing:border-box;
 }
+
 input[type="button"] {
     font-family:'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
     width: 100%;
     padding: 15px;
     border: 1px solid rgb(15, 84, 121);
     background-color: #308ae4;
-    cursor: pointer; /*the finger that appears when clicking on go*/
+    cursor: pointer; 
     font-weight: bold;
     color: #ffffff;
 }
@@ -128,6 +113,25 @@ input[type="button"] {
     top: 30%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+}
+
+#registration{
+    text-align: center;
+    display: block;
+    cursor: pointer;
+    width: 40%;
+    float: left;
+    margin-top: -50px;
+}
+
+#loginfunction{
+    width: 40%;
+    float: right;
+    margin-top: -50px;
+}
+
+.alignloginreg {
+    margin-top: 40px;
 }
 
 #checkbox{
