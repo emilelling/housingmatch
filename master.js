@@ -210,4 +210,3 @@ for (image of imagesSecond) {
     }
   }
 }
-
