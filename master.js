@@ -13,6 +13,7 @@ const loginUI = document.getElementById ('login')
 
 
 submitUI.onclick = function () {
+  console.log(activeUser)
   var firstName = firstNameUI.value
   var lastName = lastNameUI.value
   var username = usernameUI.value
@@ -31,7 +32,7 @@ submitUI.onclick = function () {
 
  if (true ||eMailUI.value.endsWith("@student.cbs.dk")){
     // activeUser = {firstName: firstName, lastName: lastName, eMail: eMail, username: username, password: password}
-  activeUser.push(new Users (firstName, lastName, username, password, eMail, null, null, null))
+  activeUser.push(new Users(firstName, lastName, username, password, eMail, null, null, null))
      users.push(activeUser);
      console.log(users);
      
@@ -73,6 +74,7 @@ if (inputPassword.length < 1 || inputUsername.length < 1) {
   
 }
 
+<<<<<<< HEAD
   for (let i = 0; i < users.length; i ++) {
     if //we want to check if the username and password already excist in the local storage //
         alert('Login is correct')
@@ -83,6 +85,11 @@ if (inputPassword.length < 1 || inputUsername.length < 1) {
         document.getElementById('moodpicturesSecond') .style.display = 'none';
         document.getElementById('imagesubmitbtn') .style.display ='none';
         return true;
+=======
+else if (activeUser = JSON.parse(localStorage.getItem('activeuser'))) {
+    for (let i = 0; i < users.length; i++) {
+      activeUser[i] = new User (activeUser[i].firstName, activeUser[i].lastName, activeUser[i].eMail, activeUser[i].username, activeUser[i].password);
+>>>>>>> parent of f890ea8... Update master.js
     }
 }
   
