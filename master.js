@@ -74,7 +74,6 @@ if (inputPassword.length < 1 || inputUsername.length < 1) {
   
 }
 
-<<<<<<< HEAD
   for (let i = 0; i < users.length; i ++) {
     if //we want to check if the username and password already excist in the local storage //
         alert('Login is correct')
@@ -85,11 +84,6 @@ if (inputPassword.length < 1 || inputUsername.length < 1) {
         document.getElementById('moodpicturesSecond') .style.display = 'none';
         document.getElementById('imagesubmitbtn') .style.display ='none';
         return true;
-=======
-else if (activeUser = JSON.parse(localStorage.getItem('activeuser'))) {
-    for (let i = 0; i < users.length; i++) {
-      activeUser[i] = new User (activeUser[i].firstName, activeUser[i].lastName, activeUser[i].eMail, activeUser[i].username, activeUser[i].password);
->>>>>>> parent of f890ea8... Update master.js
     }
 }
   
