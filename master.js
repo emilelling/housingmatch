@@ -13,7 +13,6 @@ const loginUI = document.getElementById ('login')
 
 
 submitUI.onclick = function () {
-  console.log(activeUser)
   var firstName = firstNameUI.value
   var lastName = lastNameUI.value
   var username = usernameUI.value
@@ -54,21 +53,25 @@ submitUI.onclick = function () {
    document.getElementById('moodpicturesFirst') .style.display = 'none';
    document.getElementById('moodpicturesSecond') .style.display = 'none';
    document.getElementById('imagesubmitbtn') .style.display ='none';
-
+   document.getElementById('loginfunction') .style.display ='none';
  }
 
 // Login function 
 
+var activeUser = JSON.parse(localStorage.getItem('activeuser'))
+console.log(activeUser)
+
 loginUI.onclick = function () {
   console.log ('loginUser')
 
-  var inputUsername = document.getElementById("usernameLogin").value;
-  var inputPassword = document.getElementById("passwordLogin").value;
+  // retreive data from username and passowrd and store in username/password variable
+let inputUsername = document.getElementById('username').value;
+let inputPassword = document.getElementById('password').value;
 
-  if (inputPassword.length < 1 || inputUsername.length < 1) {
-      alert("You should input something");
-      return false;
-  }
+if (inputPassword.length < 1 || inputUsername.length < 1) {
+    alert("You should input something");
+  
+}
 
   for (let i = 0; i < users.length; i ++) {
     if //we want to check if the username and password already excist in the local storage //
@@ -182,4 +185,3 @@ for (image of imagesSecond) {
     }
   }
 }
-
