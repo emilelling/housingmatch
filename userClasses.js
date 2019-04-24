@@ -13,7 +13,7 @@ class Users {
 
     // constructor (properties you have) not same as variable (is just a label)
     // createString () {
-    // return this.firstName + "" + this.lastName 
+    // return this.firstName + "" + this.lastName ^ 
     // }
 
 }
