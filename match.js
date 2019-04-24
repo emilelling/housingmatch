@@ -18,7 +18,7 @@ matchArray = []
 
 // the two above are the same as the filter function below
 
-var activeUser = JSON.parse(localStorage.getItem('activeuser'))
+var activeUser = JSON.parse(localStorage.getItem('activeUser'))
 console.log(activeUser)
 console.log(hosts)
   const filteredHosts = hosts.filter(function (host) {
