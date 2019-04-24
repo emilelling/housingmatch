@@ -14,6 +14,7 @@ const loginUI = document.getElementById ('login')
 // const checkBoxUI = document.getElementById ('checkbox1')
 
 
+
 submitUI.onclick = function () {
   console.log(activeUser)
   var firstName = firstNameUI.value
