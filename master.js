@@ -71,7 +71,7 @@ loginUI.onclick = function () {
   }
 
   for (let i = 0; i < users.length; i ++) {
-    if //we want to check if the username and password already excist in the local storage {  
+    if //we want to check if the username and password already excist in the local storage //
         alert('Login is correct')
         localStorage.setItem('activeUser', JSON.stringify(users[i]));
         document.getElementById('registration') .style.display ='none';
@@ -82,8 +82,7 @@ loginUI.onclick = function () {
         return true;
     }
 }
-
-}   
+  
  
 // Checkbox function
  function checkBox () {
