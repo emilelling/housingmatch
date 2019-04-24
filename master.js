@@ -31,7 +31,7 @@ submitUI.onclick = function () {
 
  if (true ||eMailUI.value.endsWith("@student.cbs.dk")){
     // activeUser = {firstName: firstName, lastName: lastName, eMail: eMail, username: username, password: password}
-  activeUser.push(new Users (firstName, lastName, username, password, eMail, null, null, null))
+  activeUser.push(new Users(firstName, lastName, username, password, eMail, null, null, null))
      users.push(activeUser);
      console.log(users);
      
@@ -58,6 +58,9 @@ submitUI.onclick = function () {
 
 // Login function 
 
+var activeUser = JSON.parse(localStorage.getItem('activeuser'))
+console.log(activeUser)
+
 loginUI.onclick = function () {
   console.log ('loginUser')
 
@@ -70,17 +73,17 @@ loginUI.onclick = function () {
       return false;
   }
 
-  if (localStorage.getItem('user' === null)) {
+  else if (localStorage.getItem('user' === null)) {
     users = [
       // // hardcoded user
       // new User ('Amelie', 'Schwall', 'amsc15ab@student.cbs.dk', 'cbsmatch')
     ];
     localStorage.setItem('users',JSON.stringify(users));
   }
-  else {
-    users = JSON.parse(localStorage.getItem('users'));
-    for (let i = 0; i < users.length; i++) {
-      users[i] = new User(users[i].firstName, users[i].lastName, users[i].eMail, users[i].username, users[i].password);
+  if {
+    activeuser = JSON.parse(localStorage.getItem('users'));
+    for (let i = 0; i < activeUser.length; i++) {
+      activeUser[i] = new activeUser (activeUser[i].firstName, activeUser[i].lastName, activeUser[i].eMail, activeUser[i].username, activeUser[i].password);
     }
  }
 
