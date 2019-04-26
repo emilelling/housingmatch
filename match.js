@@ -52,6 +52,12 @@ arrowleft.onclick = function() {
   document.getElementById ('match4').style.display ='none';
 }
 
+console.log("check")
+function textmatch() {
+  alert ("email has been sent to " + filteredHostImg[0].eMail)
+  console.log("check2")
+}
+
 // If function of matches succeed
 // Display value 0 Match in match1 ID + display value 1 match in match2 ID etc.
 // Create predefined HTML that appears/dissapears when arrow is pushed (use code from index.html)
