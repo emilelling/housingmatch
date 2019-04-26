@@ -22,11 +22,11 @@ var activeUser = JSON.parse(localStorage.getItem('activeUser'))
 console.log(activeUser)
 console.log(hosts)
   const filteredHosts = hosts.filter(function (host) {
-    return host.levelofstudy == activeUser[0].levelofstudy 
+    return host.levelofstudy == activeUser.levelofstudy 
   }) 
 
   const filteredHostImg = filteredHosts.filter (function (host) {
-    return host.imagechoiceFirst == activeUser[0].imagechoiceFirst || host.imagechoiceSecond == activeUser[0].imagechoiceSecond
+    return host.imagechoiceFirst == activeUser.imagechoiceFirst || host.imagechoiceSecond == activeUser.imagechoiceSecond
     
     
   })
@@ -53,9 +53,10 @@ arrowleft.onclick = function() {
 }
 
 console.log("check")
-function textmatch() {
-  alert ("email has been sent to " + filteredHostImg[0].eMail)
-  console.log("check2")
+function textmatch(e) {
+  let id = e.dataset.id
+  alert ("email has been sent to " + filteredHostImg[id].eMail)
+
 }
 
 // If function of matches succeed
