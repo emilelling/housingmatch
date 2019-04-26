@@ -1,5 +1,14 @@
-var activeUser = JSON.parse(localStorage.getItem('activeUser'))
-console.log(activeUser)
+let users;
+let activeUser;
+
+if (localStorage.getItem('users') == null) {
+  users = getUsers();
+} else {
+  users = JSON.parse(localStorage.getItem("users"))
+}
+
+// var activeUser = JSON.parse(localStorage.getItem('activeUser'))
+// console.log(activeUser)
 
 // Function for adding users 
 const firstNameUI = document.getElementById('first-name')
@@ -14,57 +23,55 @@ const loginUI = document.getElementById ('login')
 // const checkBoxUI = document.getElementById ('checkbox1')
 
 
-
+// Looks pretty now
 submitUI.onclick = function () {
-  console.log(activeUser)
+  // console.log(activeUser)
   var firstName = firstNameUI.value
   var lastName = lastNameUI.value
   var username = usernameUI.value
   var password = passwordUI.value
   var eMail =  eMailUI.value
   
- // activate later!! 
- //if(firstNameUI.value.length === 0 || lastNameUI.value.length === 0 || usernameUI.value.length === 0 || passwordUI.value.length === 0) {
- //alert ("You need to fill out the form");
- //return false;
- //}
-//  if(passwordUI.value.length < 5) {
-//     alert ("Your password is too short");
-//     return false;
-//    }
+  // The password has to be longer than 5 characters, the fields can't be empty
+  if(firstNameUI.value.length === 0 || lastNameUI.value.length === 0 || usernameUI.value.length === 0 || passwordUI.value.length === 0) {
+    alert ("You need to fill out the form");
+    return false;
+  }
 
- if (true ||eMailUI.value.endsWith("@student.cbs.dk")){
-    // activeUser = {firstName: firstName, lastName: lastName, eMail: eMail, username: username, password: password}
-  activeUser.push(new Users(firstName, lastName, username, password, eMail, null, null, null))
-     users.push(activeUser);
-     console.log(users);
-     
-    // localStorage.setItem ("activeuser", JSON.stringify(activeUser))
-   }
- else {
-   // firstNameUI.value ="";
-   // lastNameUI.value = "";
-   usernameUI.value = "";
-   passwordUI.value = "";
-   alert ("Please enter a valid CBS email");
-   }
+  if (eMailUI.value.endsWith("@student.cbs.dk")){
+    console.log(users);
+  }
 
-  //  window.localStorage.setItem("users", JSON.stringify(users));
-  //  JSON.parse(window.localStorage.getItem("users"));
+  else {
+    usernameUI.value = "";
+    passwordUI.value = "";
+    alert ("Please enter a valid CBS email");
+    return false;
+  }
 
-   document.getElementById('registration') .style.display ='none';
-   document.getElementById('checkbox') .style.display = 'block';
-   document.getElementById('moodpicturesFirst') .style.display = 'none';
-   document.getElementById('moodpicturesSecond') .style.display = 'none';
-   document.getElementById('imagesubmitbtn') .style.display ='none';
-   document.getElementById('loginfunction') .style.display ='none';
- }
+  if(passwordUI.value.length < 5) {
+    alert ("Your password is too short");
+    return false;
+  }
+
+  let newUser = new Users(firstName, lastName, eMail, username, password)
+  
+  users.push(newUser);
+  localStorage.setItem('users', JSON.stringify(users))
+  
+  activeUser = newUser
+  localStorage.setItem('activeUser', JSON.stringify(activeUser))
+
+
+  document.getElementById('registration') .style.display ='none';
+  document.getElementById('checkbox') .style.display = 'block';
+  document.getElementById('moodpicturesFirst') .style.display = 'none';
+  document.getElementById('moodpicturesSecond') .style.display = 'none';
+  document.getElementById('imagesubmitbtn') .style.display ='none';
+  document.getElementById('loginfunction') .style.display ='none';
+}
 
 // Login function 
-
-// var activeUser = JSON.parse(localStorage.getItem('activeuser'))
-// console.log(activeUser)
-
 loginUI.onclick = function () {
   console.log ('loginUser')
 
@@ -73,147 +80,97 @@ loginUI.onclick = function () {
   let inputPassword = document.getElementById('passwordLogin').value;
 
   if (inputPassword.length < 1 || inputUsername.length < 1) {
-      alert("You should input something");
-      return false;
+    alert("You should input something");
+    return false;
   }
 
-  if (localStorage.getItem('users') == null) {
-    users = [
-      // // hardcoded user
-      // new User ('Amelie', 'Schwall', 'amsc15ab@student.cbs.dk', 'cbsmatch')
-    ];
-    localStorage.setItem('users',JSON.stringify(users));
-  } else {
-    users = localStorage.getItem("users")
-  }
- 
-  // else {
-  //   users = JSON.parse(localStorage.getItem('users'));
-  //   for (let i = 0; i < users.length; i++) {
-  //     users[i] = new Users (users[i].firstName, users[i].lastName, users[i].eMail, users[i].username, users[i].password);
-  //   }
-//  }
+  // // Checks if user is in localstorage - if not, creates empty array - if is it accesses the localstorage users array ---------------------  Screenshot for report?
 
-// loop through all the user objects and confrim if the username and password are correct
-for(var i = 0; i < users.length; i++) {
+  // loop through all the user objects and confrim if the username and password are correct
+  for(var i = 0; i < users.length; i++) {
   // check to
-  if(inputUsername == users[i].username && inputPassword == users[i].password) {
-      alert(`Welcome ${username}`);
-      
-      // stop the statement if result is found true - this was a return in the video, break is best practice here
-  } 
-}
-// error if username and password don’t match
-//alert('Incorrect username or password');
+    if(inputUsername == users[i].username && inputPassword == users[i].password) {
+      activeUser = users[i]
+      localStorage.setItem('activeUser', JSON.stringify(activeUser));
+    // stop the statement if result is found true - this was a return in the video, break is best practice here
+    } 
+  }
+  // error if username and password don’t match
+  //alert('Incorrect username or password');
 
   window.location.href = "./match.html";
-        return true;
-
+  return true;
 }
-
-
-  // for (let i = 0; i < users.length; i ++) {
-  //   if //we want to check if the username and password already excist in the local storage {  
-  //       alert('Login is correct')
-  //       localStorage.setItem('activeUser', JSON.stringify(users[i]));
-  //       document.getElementById('registration') .style.display ='none';
-  //       document.getElementById('checkbox') .style.display = 'block';
-  //       document.getElementById('moodpicturesFirst') .style.display = 'none';
-  //       document.getElementById('moodpicturesSecond') .style.display = 'none';
-  //       document.getElementById('imagesubmitbtn') .style.display ='none';
-  //       return true;
-  //   }
-//}
    
  
 // Checkbox function
- function checkBox () {
+function checkBox () { 
+  var bachelor = document.getElementById("BA").checked;
+  var master = document.getElementById("MA").checked;
+  if (bachelor == false && master == false) {
+    alert("Please check one box");
+    return false; 
+  }
+
+  else if (bachelor == true && master == true) {
+    alert("Please check just one box");
+    return false; 
+  }
+
+  if ((document.getElementById("BA").checked == true) && (document.getElementById("MA").checked == false)) {
+    document.getElementById('registration') .style.display ='none';
+    document.getElementById('checkbox') .style.display = 'none';
+    document.getElementById('moodpicturesFirst') .style.display = 'block';
+    document.getElementById('moodpicturesSecond') .style.display = 'none';
+    document.getElementById ('imagesubmitbtn').style.display ='none';
+
+    activeUser.levelofstudy = 'BA'
+    localStorage.setItem('activeUser', JSON.stringify(activeUser))
+    console.log(activeUser)
+    return false;
+  }
  
- var bachelor = document.getElementById("BA").checked;
- var master = document.getElementById("MA").checked;
-     if (bachelor == false && master == false)
-     {
-        alert("Please check one box");
-        return false; 
-     }
+  else if ((document.getElementById("BA").checked == false) && (document.getElementById("MA").checked == true)) {
+    document.getElementById('registration') .style.display ='none';
+    document.getElementById('checkbox') .style.display = 'none';
+    document.getElementById('moodpicturesFirst') .style.display = 'block';
+    document.getElementById('moodpicturesSecond') .style.display = 'none';
+    document.getElementById ('imagesubmitbtn').style.display ='none';
  
-    else if (bachelor == true && master == true)
-     {
-         alert("Please check just one box");
-         return false; 
-     }
- 
-
-
-     if ((document.getElementById("BA").checked == true) && (document.getElementById("MA").checked == false)) {
-         document.getElementById('registration') .style.display ='none';
-         document.getElementById('checkbox') .style.display = 'none';
-         document.getElementById('moodpicturesFirst') .style.display = 'block';
-         document.getElementById('moodpicturesSecond') .style.display = 'none';
-         document.getElementById ('imagesubmitbtn').style.display ='none';
-      
-
-        //  window.localStorage.setItem("users", JSON.stringify(users));
-        //  JSON.parse(window.localStorage.getItem("users"));
-         activeUser[0].levelofstudy = 'BA'
-         console.log(activeUser)
-         return false;
-        
-         
-     }
- 
-
-     else if ((document.getElementById("BA").checked == false) && (document.getElementById("MA").checked == true)) {
-         document.getElementById('registration') .style.display ='none';
-         document.getElementById('checkbox') .style.display = 'none';
-         document.getElementById('moodpicturesFirst') .style.display = 'block';
-         document.getElementById('moodpicturesSecond') .style.display = 'none';
-         document.getElementById ('imagesubmitbtn').style.display ='none';
-
-  
+     window.localStorage.setItem("users", JSON.stringify(users));
+     JSON.parse(window.localStorage.getItem("users"));
+    activeUser.levelofstudy = 'MA'
+    console.log(activeUser)
+    return false; 
+  }
+}
      
-        //  window.localStorage.setItem("users", JSON.stringify(users));
-        //  JSON.parse(window.localStorage.getItem("users"));
-         activeUser[0].levelofstudy = 'MA'
-         console.log(activeUser)
-         return false;
-        
-     }
-
-
-    }
-     
-
-
 // Image function 1
 const imagesFirst = document.getElementsByClassName('imageFirst')
-
 for (image of imagesFirst) {
   image.onclick = function() {
     console.log(this.dataset.itemid);
-    activeUser[0].imagechoiceFirst = this.dataset.itemid
+    activeUser.imagechoiceFirst = this.dataset.itemid
 
  
-      document.getElementById('moodpicturesFirst') .style.display = 'none';
-      document.getElementById('moodpicturesSecond') .style.display = 'block';
-      document.getElementById ('imagesubmitbtn').style.display ='none';
+    document.getElementById('moodpicturesFirst') .style.display = 'none';
+    document.getElementById('moodpicturesSecond') .style.display = 'block';
+    document.getElementById ('imagesubmitbtn').style.display ='none';
     
   }
 }
 
-
-
 // Image function 2
 const imagesSecond = document.getElementsByClassName('imageSecond')
-
 for (image of imagesSecond) {
   image.onclick = function() {
     console.log(this.dataset.itemid);
-    activeUser[0].imagechoiceSecond = this.dataset.itemid
+    activeUser.imagechoiceSecond = this.dataset.itemid
 
     window.localStorage.setItem("users", JSON.stringify(users));
-
     window.localStorage.setItem("activeUser", JSON.stringify(activeUser));
+
+
     document.getElementById('moodpicturesFirst') .style.display = 'none';
     document.getElementById('moodpicturesSecond') .style.display = 'none';
     document.getElementById ('imagesubmitbtn').style.display ='block';
