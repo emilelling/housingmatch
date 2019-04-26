@@ -176,8 +176,7 @@ input[type="button"] {
 }   
 
 
-#checkboxbtn
-{
+#checkboxbtn {
     font-family:'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
     padding: 15px;
     width: 20%;
@@ -194,9 +193,8 @@ input[type="button"] {
 
 
 img {
-    width: 200px;
-    height: 200px;
-    padding: 20px;
+    width: 250px;
+    height: 250px;
     border: 2px;
 }
 
@@ -228,7 +226,7 @@ img {
 }
 
 .matchbox {
-    width: 350px;
+    width: 270px;
     min-height: 300px;
     line-height: 2;
     border-radius: 25px;
