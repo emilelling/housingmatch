@@ -6,7 +6,6 @@ if (localStorage.getItem('users') == null) {
 } else {
   users = JSON.parse(localStorage.getItem("users"))
 }
-
 // var activeUser = JSON.parse(localStorage.getItem('activeUser'))
 // console.log(activeUser)
 
@@ -62,7 +61,6 @@ submitUI.onclick = function () {
   activeUser = newUser
   localStorage.setItem('activeUser', JSON.stringify(activeUser))
 
-
   document.getElementById('registration') .style.display ='none';
   document.getElementById('checkbox') .style.display = 'block';
   document.getElementById('moodpicturesFirst') .style.display = 'none';
@@ -100,9 +98,8 @@ loginUI.onclick = function () {
 
   window.location.href = "./match.html";
   return true;
-}
-   
- 
+}  
+
 // Checkbox function
 function checkBox () { 
   var bachelor = document.getElementById("BA").checked;
@@ -137,8 +134,8 @@ function checkBox () {
     document.getElementById('moodpicturesSecond') .style.display = 'none';
     document.getElementById ('imagesubmitbtn').style.display ='none';
  
-     window.localStorage.setItem("users", JSON.stringify(users));
-     JSON.parse(window.localStorage.getItem("users"));
+    window.localStorage.setItem("users", JSON.stringify(users));
+    JSON.parse(window.localStorage.getItem("users"));
     activeUser.levelofstudy = 'MA'
     console.log(activeUser)
     return false; 
