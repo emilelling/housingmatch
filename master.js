@@ -1,6 +1,8 @@
 let users;
 let activeUser;
 
+/* It is checked whether the user is existing in the local storage, 
+if it is equal to == null → we created a function within the userClasses.js file consisting of hard coded users and to an empty array*/
 if (localStorage.getItem('users') == null) {
   users = getUsers();
 } else {
@@ -23,7 +25,6 @@ const loginUI = document.getElementById ('login')
 // const checkBoxUI = document.getElementById ('checkbox1')
 
 
-// Looks pretty now
 submitUI.onclick = function () {
   // console.log(activeUser)
   var firstName = firstNameUI.value
@@ -54,6 +55,8 @@ submitUI.onclick = function () {
     return false;
   }
 
+/*The newUser (variable) pushes by default to the users class, 
+it is the same as our “new Users” but with a specific set of dataids in which it pushes*/  
   let newUser = new Users(firstName, lastName, eMail, username, password)
   
   users.push(newUser);
