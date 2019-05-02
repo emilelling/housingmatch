@@ -140,7 +140,7 @@ function checkBox () {
     window.localStorage.setItem("users", JSON.stringify(users));
     JSON.parse(window.localStorage.getItem("users"));
     activeUser.levelofstudy = 'MA'
-    console.log(activeUser)
+    console.log(activeUser);
     return false; 
   }
 }
