@@ -93,14 +93,14 @@ loginUI.onclick = function () {
       activeUser = users[i] 
       localStorage.setItem('activeUser', JSON.stringify(activeUser)); 
       window.location.href = "./match.html";
-      return true;
       // stop the statement if result is found true - this was a return in the video, break is best practice here
     }
-
-    else if(!inputUsername == users[i].username && !inputPassword == users[i].password){
+    if (!inputUsername == users[i].username && !inputPassword == users[i].password){
       alert ('Incorrect username or password');
+      break;
     } 
   }  
+  // window.location.href = "./match.html";
 }
 
 // Checkbox function
