@@ -88,21 +88,34 @@ loginUI.onclick = function () {
 
   //Checks if user is in localstorage - if not, creates empty array - if is it accesses the localstorage users array ---------------------  Screenshot for report?
   // loop through all the user objects and confrim if the username and password are correct
-  for(var i = 0; i < users.length; i++) {
-    if(inputUsername == users[i].username && inputPassword == users[i].password) {
-      activeUser = users[i] 
-      localStorage.setItem('activeUser', JSON.stringify(activeUser)); 
-      window.location.href = "./match.html";
-      // stop the statement if result is found true - this was a return in the video, break is best practice here
-    }
-    if (!inputUsername == users[i].username && !inputPassword == users[i].password){
-      alert ('Incorrect username or password');
-      break;
-    } 
-  }  
-  // window.location.href = "./match.html";
-}
+//   for(var i = 0; i < users.length; i++) {
+//     if(inputUsername == users[i].username && inputPassword == users[i].password) {
+//       activeUser = users[i] 
+//       localStorage.setItem('activeUser', JSON.stringify(activeUser)); 
+//       window.location.href = "./match.html";
+//       // stop the statement if result is found true - this was a return in the video, break is best practice here
+//     }
+//     
+//   }  
+//   // window.location.href = "./match.html";
+// }
 
+for(let i = 0; i < users.length; i++) {
+  if(inputUsername === users[i].username && inputPassword === users[i].password) {
+    activeUser = users[i] 
+    localStorage.setItem('activeUser', JSON.stringify(users[i])); 
+    window.location.href = "./match.html";
+    } 
+  else {
+   alert ('Incorrect username or password');
+   break;
+  } 
+  // if (inputUsername !== users[i].username && inputPassword !== users[i].password){
+  //   alert ('Incorrect username or password');
+  //   break;
+  // } 
+  }
+}
 // Checkbox function
 function checkBox () { 
   var bachelor = document.getElementById("BA").checked;
