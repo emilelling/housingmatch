@@ -101,20 +101,21 @@ loginUI.onclick = function () {
 // }
 
 for(let i = 0; i < users.length; i++) {
-  if(inputUsername === users[i].username && inputPassword === users[i].password) {
+  if(inputUsername == users[i].username && inputPassword == users[i].password) {
     activeUser = users[i] 
     localStorage.setItem('activeUser', JSON.stringify(users[i])); 
     window.location.href = "./match.html";
     } 
-  else {
-   alert ('Incorrect username or password');
-   break;
+  }
+if (inputUsername !== users[i].username && inputPassword !== users[i].password) {
+  activeUser = users[i] 
+  localStorage.setItem('activeUser', JSON.stringify(users[i])); 
+  alert ('Incorrect username or password')
   } 
   // if (inputUsername !== users[i].username && inputPassword !== users[i].password){
   //   alert ('Incorrect username or password');
   //   break;
   // } 
-  }
 }
 // Checkbox function
 function checkBox () { 
