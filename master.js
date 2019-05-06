@@ -53,6 +53,7 @@ submitUI.onclick = function () {
     alert ("Your password is too short");
     return false;
   }
+ 
 
 /*The newUser (variable) pushes by default to the users class, 
 it is the same as our “new Users” but with a specific set of dataids in which it pushes*/  
@@ -85,23 +86,22 @@ loginUI.onclick = function () {
     return false;
   }
 
-  // // Checks if user is in localstorage - if not, creates empty array - if is it accesses the localstorage users array ---------------------  Screenshot for report?
-
+  //Checks if user is in localstorage - if not, creates empty array - if is it accesses the localstorage users array ---------------------  Screenshot for report?
   // loop through all the user objects and confrim if the username and password are correct
   for(var i = 0; i < users.length; i++) {
-  // check to
     if(inputUsername == users[i].username && inputPassword == users[i].password) {
-      activeUser = users[i]
-      localStorage.setItem('activeUser', JSON.stringify(activeUser));
-    // stop the statement if result is found true - this was a return in the video, break is best practice here
-    } 
-  }
-  // error if username and password don’t match
-  //alert('Incorrect username or password');
+      activeUser = users[i] 
+      localStorage.setItem('activeUser', JSON.stringify(activeUser)); 
+      window.location.href = "./match.html";
+      return true;
+      // stop the statement if result is found true - this was a return in the video, break is best practice here
+    }
 
-  window.location.href = "./match.html";
-  return true;
-}  
+    else if(!inputUsername == users[i].username && !inputPassword == users[i].password){
+      alert ('Incorrect username or password');
+    } 
+  }  
+}
 
 // Checkbox function
 function checkBox () { 
