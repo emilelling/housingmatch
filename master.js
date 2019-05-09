@@ -124,7 +124,10 @@ function checkBox () {
     document.getElementById ('imagesubmitbtn').style.display ='none';
 
     activeUser.levelofstudy = 'BA'
-    localStorage.setItem('activeUser', JSON.stringify(activeUser))
+    users.levelofstudy = 'BA'
+
+    localStorage.setItem("users", JSON.stringify(users));
+    localStorage.setItem("activeUser", JSON.stringify(activeUser));
     console.log(activeUser)
     return false;
   }
@@ -136,9 +139,11 @@ function checkBox () {
     document.getElementById('moodpicturesSecond') .style.display = 'none';
     document.getElementById ('imagesubmitbtn').style.display ='none';
  
-    window.localStorage.setItem("users", JSON.stringify(users));
-    JSON.parse(window.localStorage.getItem("users"));
     activeUser.levelofstudy = 'MA'
+    users.levelofstudy = 'MA'
+
+    localStorage.setItem("users", JSON.stringify(users));
+    localStorage.setItem("activeUser", JSON.stringify(activeUser));
     console.log(activeUser);
     return false; 
   }
@@ -150,7 +155,9 @@ for (image of imagesFirst) {
   image.onclick = function() {
     console.log(this.dataset.itemid);
     activeUser.imagechoiceFirst = this.dataset.itemid
-
+    
+    window.localStorage.setItem("users", JSON.stringify(users));
+    window.localStorage.setItem("activeUser", JSON.stringify(activeUser));
  
     document.getElementById('moodpicturesFirst') .style.display = 'none';
     document.getElementById('moodpicturesSecond') .style.display = 'block';
