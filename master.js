@@ -88,22 +88,24 @@ loginUI.onclick = function () {
 
   //Checks if user is in localstorage - if not, creates empty array - if is it accesses the localstorage users array ---------------------  Screenshot for report?
   // loop through all the user objects and confrim if the username and password are correct
-
-  for (let i = 0; i < users.length; i++) {
-    if (inputUsername == users[i].username && inputPassword == users[i].password) {
-      activeUser = users[i]
-      localStorage.setItem('activeUser', JSON.stringify(users[i]));
-      window.location.href = "./match.html";
-    }
-    // else if(inputUsername !== users[i].username && inputPassword !== users[i].password){
-    //   alert('Incorrect username or password');
-    //  break;
-    // }
-  }
+  for(var i = 0; i < users.length; i++) {
+    // check to
+      if(inputUsername == users[i].username && inputPassword == users[i].password) {
+        activeUser = users[i]
+        localStorage.setItem('activeUser', JSON.stringify(activeUser));
+      // stop the statement if result is found true - this was a return in the video, break is best practice here
+        window.location.href = "./match.html";
+      } 
   
-  alert ("incorrect");
-
-}
+    }
+    // error if username and password don’t match
+    //alert('Incorrect username or password');
+  
+  // if(inputUsername != users[i].username && inputPassword != users[i].password) {
+  // alert("wrong user")
+  // return false;
+  // }
+  } 
 
 // Checkbox function
 function checkBox() {
