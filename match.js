@@ -1,8 +1,3 @@
-// let users = localStorage.getItem ("users")
-// users = JSON.parse(users)
-
-
-
 matchArray = []
 
 // OTHER OPTIONS:
@@ -27,8 +22,6 @@ console.log(hosts)
 
   const filteredHostImg = filteredHosts.filter (function (host) {
     return host.imagechoiceFirst == activeUser.imagechoiceFirst || host.imagechoiceSecond == activeUser.imagechoiceSecond
-    
-    
   })
 
 
