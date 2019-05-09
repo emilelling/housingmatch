@@ -97,11 +97,9 @@ loginUI.onclick = function () {
       window.location.href = "./match.html";
       return false;
     } 
-  
   }
   // error if username and password don’t match
-  //alert('Incorrect username or password');
-// this function does not run atm
+  alert('Try again');
 }  
 
 // Checkbox function
