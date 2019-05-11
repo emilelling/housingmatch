@@ -1,25 +1,9 @@
 matchArray = []
 
-/*
-OTHER OPTIONS:
-
-1.
-hosts.forEach(function (host) {
-  console.log(host.name)
-})
-
-2.
-for (let i = 0; i < hosts.length; i++) {
-  console.log(hosts[i].name)
-}
-
-the two above are the same as the filter function below
-*/
-
 var activeUser = JSON.parse(localStorage.getItem('activeUser'))
 console.log(activeUser)
 console.log(hosts)
-  const filteredHosts = hosts.filter(function (host) {
+const filteredHosts = hosts.filter(function (host) {
     return host.levelofstudy == activeUser.levelofstudy 
   }) 
 
@@ -55,40 +39,3 @@ function textmatch(e) {
   alert ("email has been sent to " + filteredHostImg[id].eMail)
 
 }
-
-// If function of matches succeed
-// Display value 0 Match in match1 ID + display value 1 match in match2 ID etc.
-// Create predefined HTML that appears/dissapears when arrow is pushed (use code from index.html)
-
-
-
- //retrieved from method in class
-
-// var htmlString = ""
-// var li = document.getElementById('match1')
-// var li = document.getElementById('match2')
-
-//This string should retrieve host matches firstname of first match
-// var htmlString = "";
-
-// var li = htmlString.indexOf("loc);
-// document.getElementById("firstName1").innerHTML = pos;
-
-
-// var hostmatchfirstname1 = "boo";
-// var hostmatchlastname1 = "hej hej hej";
-// var hostmatchprice1 = "hej hej hej";
-// var hostmatchlocation1 = "hej"; 
-
-// document.getElementById("hostmatch").innerHTML = hostmatchfirstname1 + "<br>" + hostmatchlastname1 + "<br>"+ hostmatchprice1 + "<br>" + hostmatchlocation1;
-
-
- // Will run through every item in the random array and push to string
- //matchArray refers to the array of hosts that match the user
-
-
-//  for (i=0; i < matchArray.length; i++){
-//   htmlString += matchArray[i].createString()
-//  }
-//  //Push to html
-//  span1 += htmlString
