@@ -1,22 +1,20 @@
-// let users = localStorage.getItem ("users")
-// users = JSON.parse(users)
-
-
-
 matchArray = []
 
-// OTHER OPTIONS:
-//1.
-// hosts.forEach(function (host) {
-//   console.log(host.name)
-// })
+/*
+OTHER OPTIONS:
 
-//2.
-// for (let i = 0; i < hosts.length; i++) {
-//   console.log(hosts[i].name)
-// }
+1.
+hosts.forEach(function (host) {
+  console.log(host.name)
+})
 
-// the two above are the same as the filter function below
+2.
+for (let i = 0; i < hosts.length; i++) {
+  console.log(hosts[i].name)
+}
+
+the two above are the same as the filter function below
+*/
 
 var activeUser = JSON.parse(localStorage.getItem('activeUser'))
 console.log(activeUser)
@@ -26,10 +24,9 @@ console.log(hosts)
   }) 
 
   const filteredHostImg = filteredHosts.filter (function (host) {
-    return host.imagechoiceFirst == activeUser.imagechoiceFirst || host.imagechoiceSecond == activeUser.imagechoiceSecond
-    
-    
+    return host.imagechoiceFirst == activeUser.imagechoiceFirst || host.imagechoiceSecond == activeUser.imagechoiceSecond 
   })
+
 
 
 console.log(filteredHostImg)
@@ -37,7 +34,7 @@ document.getElementById("hostmatch1").innerHTML = filteredHostImg[0].firstName +
 document.getElementById("hostmatch2").innerHTML = filteredHostImg[1].firstName + " " + filteredHostImg[1].lastName + "<br>" + filteredHostImg[1].eMail + "<br>" + filteredHostImg[1].price + "<br>" + filteredHostImg[1].location + "<br>" + filteredHostImg[1].levelofstudy;
 document.getElementById("hostmatch3").innerHTML = filteredHostImg[2].firstName + " " + filteredHostImg[2].lastName + "<br>" + filteredHostImg[2].eMail + "<br>" + filteredHostImg[2].price + "<br>" + filteredHostImg[2].location + "<br>" + filteredHostImg[2].levelofstudy;
 document.getElementById("hostmatch4").innerHTML = filteredHostImg[3].firstName + " " + filteredHostImg[3].lastName + "<br>" + filteredHostImg[3].eMail + "<br>" + filteredHostImg[3].price + "<br>" + filteredHostImg[3].location + "<br>" + filteredHostImg[3].levelofstudy;
-// console.log(filteredHostImg)
+
 arrowright.onclick = function() {
   document.getElementById ('match1').style.display ='none';
   document.getElementById ('match2').style.display ='none';
