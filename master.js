@@ -8,8 +8,6 @@ if (localStorage.getItem('users') == null) {
 } else {
   users = JSON.parse(localStorage.getItem("users"))
 }
-// var activeUser = JSON.parse(localStorage.getItem('activeUser'))
-// console.log(activeUser)
 
 // Function for adding users 
 const firstNameUI = document.getElementById('first-name')
@@ -19,9 +17,7 @@ const passwordUI = document.getElementById('password')
 const eMailUI = document.getElementById('e-mail')
 const submitUI = document.getElementById('submit')
 const loginUI = document.getElementById ('login')
-//const bachelorUI = document.getElementById('BA')
-//const masterUI = document.getElementById('MA')
-// const checkBoxUI = document.getElementById ('checkbox1')
+
 
 
 submitUI.onclick = function () {
@@ -32,7 +28,6 @@ submitUI.onclick = function () {
   var password = passwordUI.value
   var eMail =  eMailUI.value
   
-  // The password has to be longer than 5 characters, the fields can't be empty
   if(firstNameUI.value.length === 0 || lastNameUI.value.length === 0 || usernameUI.value.length === 0 || passwordUI.value.length === 0) {
     alert ("You need to fill out the form");
     return false;
@@ -54,8 +49,7 @@ submitUI.onclick = function () {
     return false;
   }
 
-/*The newUser (variable) pushes by default to the users class, 
-it is the same as our “new Users” but with a specific set of dataids in which it pushes*/  
+/*The newUser (variable) pushes by default to the users class, it is the same as our “new Users” but with a specific set of dataids in which it pushes to the empty users array*/  
   let newUser = new Users(firstName, lastName, eMail, username, password)
   
   users.push(newUser);
@@ -76,20 +70,17 @@ it is the same as our “new Users” but with a specific set of dataids in whic
 loginUI.onclick = function () {
   console.log ('loginUser')
 
-  // retreive data from username and passowrd and store in username/password variable
-  let inputUsername = document.getElementById('usernameLogin').value;
-  let inputPassword = document.getElementById('passwordLogin').value;
+// retreive data from username and passowrd and store in username/password variable
+let inputUsername = document.getElementById('usernameLogin').value;
+let inputPassword = document.getElementById('passwordLogin').value;
 
   if (inputPassword.length < 1 || inputUsername.length < 1) {
     alert("You should input something");
     return false;
   }
 
-  // // Checks if user is in localstorage - if not, creates empty array - if is it accesses the localstorage users array ---------------------  Screenshot for report?
-
-  // loop through all the user objects and confrim if the username and password are correct
+  // Loop through all the user objects and confrim if the username and password are correct with was is in local storage
   for(var i = 0; i < users.length; i++) {
-  // check to
     if(inputUsername == users[i].username && inputPassword == users[i].password) {
       activeUser = users[i]
       localStorage.setItem('activeUser', JSON.stringify(activeUser));
@@ -97,11 +88,10 @@ loginUI.onclick = function () {
       return false;
     } 
   }
-  // error if username and password don’t match
   alert('Try again');
 }  
 
-// Checkbox function
+// Checkbox level of study function
 function checkBox () { 
   var bachelor = document.getElementById("BA").checked;
   var master = document.getElementById("MA").checked;
@@ -182,7 +172,7 @@ for (image of imagesSecond) {
 
 
     document.getElementById('imagebtn').onclick = function() {
-      window.location.href = "./match.html";
+    window.location.href = "./match.html";
     }
   }
 }
