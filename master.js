@@ -93,7 +93,6 @@ loginUI.onclick = function () {
     if(inputUsername == users[i].username && inputPassword == users[i].password) {
       activeUser = users[i]
       localStorage.setItem('activeUser', JSON.stringify(activeUser));
-    // stop the statement if result is found true - this was a return in the video, break is best practice here
       window.location.href = "./match.html";
       return false;
     } 
@@ -155,7 +154,7 @@ for (image of imagesFirst) {
   image.onclick = function() {
     console.log(this.dataset.itemid);
     activeUser.imagechoiceFirst = this.dataset.itemid
-    
+
     window.localStorage.setItem("users", JSON.stringify(users));
     window.localStorage.setItem("activeUser", JSON.stringify(activeUser));
  

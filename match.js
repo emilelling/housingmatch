@@ -24,7 +24,7 @@ console.log(hosts)
   }) 
 
   const filteredHostImg = filteredHosts.filter (function (host) {
-    return host.imagechoiceFirst == activeUser.imagechoiceFirst || host.imagechoiceSecond == activeUser.imagechoiceSecond 
+    return host.imagechoiceFirst == activeUser.imagechoiceFirst || host.imagechoiceSecond == activeUser.imagechoiceSecond
   })
 
 
