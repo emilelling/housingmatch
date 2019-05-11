@@ -69,18 +69,6 @@ p {
 }
 
 
-
-/* #login {
-    font-family: 'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
-    width: 15%;
-    padding: 15px;
-    border: 1px solid rgb(15, 84, 121);
-    background-color: #308ae4;
-    cursor: pointer;
-    font-weight: bold;
-    color: #ffffff;
-} */
-
 input[type="text"] {
     font-family:'Century Gothic', futura, 'URW Gothic L', Verdana, sans-serif;
     width: 100%;
@@ -182,7 +170,7 @@ input[type="button"] {
     width: 20%;
     border: 1px solid rgb(15, 84, 121);
     background-color: #308ae4;
-    cursor: pointer; /*the finger that appears when clicking on go*/
+    cursor: pointer; 
     font-weight: bold;
     color: #ffffff;
 }
